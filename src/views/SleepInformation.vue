@@ -8,8 +8,8 @@
     <div class='container'>
       <h2>How did you sleep last night?</h2>
       <form v-on:submit.prevent="submit()">
-        <!-- Make this accordian style, so it's actually a bunch of forms, not one giant form -->
-        <!-- Don't actually do modals before we pick out themes, it might conflict. -->
+        <!-- Make this accordion style, so it's actually a bunch of forms, not one giant form -->
+        <!-- Don't actually do models before we pick out themes, it might conflict. -->
         <div class="form-group">
           <label>Did you sleep well last night? </label>
           <input class='form-control' type='text' v-model="sleep.good_sleep" placeholder="">
@@ -51,7 +51,7 @@
         </div>
         
         <div class="new-button">
-          <input type="submit" value="Create" class="btn btn-primary">
+          <input type="submit" value="Add Sleep Data" class="btn btn-primary">
         </div>
       </form>
     </div>
@@ -106,9 +106,9 @@ export default {
                     electronics_in_room: this.sleep.electronics_in_room,
                     lie_in_bed: this.sleep.lie_in_bed,
                     room_temperature: this.sleep.room_temperature,
-                    user_id: this.cat.user_id
+                    user_id: this.sleep.user_id
                     };
-      axios.patch("/api/sleeps", params)
+      axios.patch("/api/sleeps/" + this.sleep.id, params)
         .then(response => {
           this.$router.push("/");
         }).catch(error => {
