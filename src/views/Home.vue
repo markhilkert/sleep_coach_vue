@@ -36,6 +36,14 @@ export default {
       sleeping: false
     };
   },
+  created: function() {
+    axios.get("/api/sleeps/")
+      .then(response => {
+        this.sleep = response.data;
+      }).catch(error => {
+        this.errors = error.response.data.errors;
+      });
+  },
   methods: {
     startSleep: function() {
       axios.post("/api/sleeps/start")
