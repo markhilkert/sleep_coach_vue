@@ -33,42 +33,47 @@ export default {
   data: function() {
     return {
       errors: [],
+      sleep: {
+              id: "",
+              user_id: ""
+              },
       sleeping: false
     };
   },
-  created: function() {
-    axios.get("/api/sleeps/")
-      .then(response => {
-        this.sleep = response.data;
-      }).catch(error => {
-        this.errors = error.response.data.errors;
-      });
-  },
+  // This will be used later on to determine if the user is logged in, and redirecting them to the login page if they are not.
+  // created: function() {
+  //   axios.get("/api/sleeps/")
+  //     .then(response => {
+  //       this.sleep = response.data;
+  //     }).catch(error => {
+  //       this.errors = error.response.data.errors;
+  //     });
+  // },
   methods: {
     startSleep: function() {
-      axios.post("/api/sleeps/start")
       this.sleeping = true
-      console.log(sleeping)
+      axios.post("/api/sleeps/start")      
       .then(response => {
-        // this.$router.push(somewhere??? + response.data.id);
+        this.sleep = response.data;
+        console.log(this.sleep)
       }).catch(error => {
         this.errors = error.response.data.errors;
       });
     },
     endSleepGood: function() {
       this.sleeping = false
-      axios.post("/api/sleeps/end_good")
+      axios.patch("/api/sleeps/end_good")
       .then(response => {
-        // this.$router.push(somewhere??? + response.data.id);
+        this.$router.push("/sleeps/" + this.sleep.id + "/edit");
       }).catch(error => {
         this.errors = error.response.data.errors;
       });
     },
     endSleepBad: function() {
       this.sleeping = false
-      axios.post("/api/sleeps/end_bad")
+      axios.patch("/api/sleeps/end_bad")
       .then(response => {
-        // this.$router.push(somewhere??? + response.data.id);
+        this.$router.push("/sleeps/" + this.sleep.id + "/edit");
       }).catch(error => {
         this.errors = error.response.data.errors;
       });
