@@ -5,6 +5,8 @@ import Signup from "./views/Signup.vue";
 import Login from './views/Login.vue';
 import Logout from './views/Logout.vue';
 import SleepInformation from './views/SleepInformation.vue';
+import Statistics from './views/Statistics.vue';
+
 
 Vue.use(Router)
 
@@ -13,6 +15,7 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     { path: '/', name: 'home', component: Home },
+    { path: "/statistics", name: "statistics", component: Statistics },
     { path: '/login', name: 'login', component: Login },
     { path: '/logout', name: 'logout', component: Logout },
     { path: "/signup", name: "signup", component: Signup },
