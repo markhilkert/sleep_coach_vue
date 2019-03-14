@@ -26,13 +26,19 @@ export default {
     };
   },
   created: function() {
+    var loggedIn = localStorage.getItem("loggedIn");
+    var userId = localStorage.getItem("userId");
+
+    if (!loggedIn) {
+      this.$router.push("/login/");
+    };
+
     axios.get("/api/sleeps/")
       .then(response => {
         this.sleeps = response.data;
-        console.log(this.sleeps[0].user_id)
     });
 
-    axios.get("/api/users/" + this.sleeps[0].user_id)
+    axios.get("/api/users/" + userId)
       .then(response => {
         this.user = response.data;
     });
