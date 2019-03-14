@@ -90,10 +90,16 @@ export default {
     };
   },
   created: function() {
+    var loggedIn = localStorage.getItem("loggedIn");
+
+    if (!loggedIn) {
+      this.$router.push("/login/");
+    };
+    
     axios.get("/api/sleeps/" + this.$route.params.id)
       .then(response => {
         this.sleep = response.data;
-      })
+      });
   },
   methods: {
     submit: function() {
