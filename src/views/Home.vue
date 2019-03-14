@@ -40,15 +40,12 @@ export default {
       sleeping: false
     };
   },
-  // This will be used later on to determine if the user is logged in, and redirecting them to the login page if they are not.
-  // created: function() {
-  //   axios.get("/api/sleeps/")
-  //     .then(response => {
-  //       this.sleep = response.data;
-  //     }).catch(error => {
-  //       this.errors = error.response.data.errors;
-  //     });
-  // },
+  created: function() {
+    var loggedIn = localStorage.getItem("loggedIn");
+    if (!loggedIn) {
+      this.$router.push("/login/");
+    };
+  },
   methods: {
     startSleep: function() {
       this.sleeping = true
