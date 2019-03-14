@@ -57,12 +57,17 @@ export default {
           axios.defaults.headers.common["Authorization"] =
             "Bearer " + response.data.jwt;
           localStorage.setItem("jwt", response.data.jwt);
+          localStorage.setItem("userId", response.data.user_id);
+          localStorage.setItem("loggedIn", true);
           this.$router.push("/");
         })
         .catch(error => {
           this.errors = ["Invalid email or password."];
           this.email = "";
           this.password = "";
+          localStorage.removeItem("loggedIn")
+          localStorage.removeItem("userId")
+          localStorage.removeItem("jwt")
         });
     }
   }
