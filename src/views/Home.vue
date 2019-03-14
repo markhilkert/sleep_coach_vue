@@ -57,7 +57,7 @@ export default {
     },
     endSleepGood: function() {
       this.sleeping = false
-      axios.post("/api/sleeps/end_good")
+      axios.patch("/api/sleeps/end_good")
       .then(response => {
         // this.$router.push(somewhere??? + response.data.id);
       }).catch(error => {
@@ -66,7 +66,7 @@ export default {
     },
     endSleepBad: function() {
       this.sleeping = false
-      axios.post("/api/sleeps/end_bad")
+      axios.patch("/api/sleeps/end_bad")
       .then(response => {
         // this.$router.push(somewhere??? + response.data.id);
       }).catch(error => {
