@@ -6,7 +6,9 @@
         <h2>Last night, you spent {{ user.last_night_sleep_time }} in bed. </h2>
       </div>
 
-
+      <div>
+        <h2>On average, you spend {{ user.average_total_sleep_time }} in bed. </h2>
+      </div>
     </div>
   </div>
 </template>
@@ -19,7 +21,8 @@ export default {
     return {
       sleeps: [],
       user: {
-        last_night_sleep_time: ""
+        last_night_sleep_time: "",
+        average_total_sleep_time: ""
       },
       errors: [],
       sleeping: false

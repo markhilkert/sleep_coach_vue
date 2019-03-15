@@ -1,0 +1,944 @@
+/*
+* Template Name : Evral - Responsive Bootstrap Landing Template
+* Version : 1.0.0
+* Created by : Themesbrand
+* File : Main css file
+*/
+
+
+/*=========================
+ *  1.Helper          *
+ *  2.Home            * 
+ *  3.Services        *
+ *  4.Features        *
+ *  5.Video landing   *
+ *  6.pricing         *
+ *  7.Fun Fact        * 
+ *  8.Team            *
+ *  9.Subscribe       *
+ *  10.More Features  * 
+ *  11.Testimonial    * 
+ *  12.About us       *
+ *  13.Contact us     *
+ *  14.Faq Accourdian *
+ *  15.Job Open       *
+ *  16.Sub Services   *
+ *  17.Clients        *
+ *  18.Footer         *
+ *  19.Log In page    *
+ *  20.Responsive     *
+===========================*/
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500|Yantramanav:400,500');
+body {
+    font-family: 'Yantramanav', sans-serif;
+    color: #252525;
+}
+
+a {
+    text-decoration: none !important;
+    outline: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+/*======================
+     1.Helper 
+========================*/
+
+.section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    position: relative;
+    background-color: #fff;
+}
+
+.btn {
+    padding: 14px 36px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.btn-rounded {
+    border-radius: 30px !important;
+}
+
+.btn-custom {
+    font-size: 15px;
+    transition: all 0.4s;
+    color: #fff !important;
+    cursor: pointer;
+}
+
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active,
+.btn-custom.active,
+.btn-custom.focus,
+.btn-custom:active,
+.btn-custom:focus,
+.btn-custom:hover,
+.open > .dropdown-toggle.btn-custom {
+    box-shadow: none !important;
+}
+
+.btn-outline {
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active,
+.btn-outline.active,
+.btn-outline.focus,
+.btn-outline:active,
+.btn-outline:focus,
+.btn-outline:hover,
+.open > .dropdown-toggle.btn-outline {
+    transition: all 0.5s;
+    outline: none;
+    text-decoration: none;
+}
+
+.vertical-content {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+}
+
+.bg-overlay {
+    background-color: rgba(11, 15, 41, 0.65);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+}
+
+.section-title {
+    max-width: 485px;
+}
+
+.section-title small {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+/*=====================
+        2.Home
+=======================*/
+
+.bg-home-clip {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 83%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 83%, 0% 100%);
+}
+
+.home-center {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.home-desc-center {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.home-title {
+    font-size: 38px;
+    line-height: 1.5;
+    text-shadow: 0px 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.home-sub-title {
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+.watch-video a span {
+    font-size: 16px;
+    padding-left: 10px;
+    position: relative;
+    top: -5px;
+}
+
+.home-height-half {
+    padding: 220px 0 185px 0;
+    height: auto;
+}
+
+
+/*====================
+    Demo - 1
+====================*/
+
+.home-height-full {
+    position: relative;
+    height: 100vh;
+}
+
+.bg-home-1 {
+    background: url('../images/bg-home-1.jpg');
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+/*=====================
+    Demo - 2
+=====================*/
+
+.bg-home-2 {
+    background: radial-gradient(at 50% -20%, #3D4E81, #5753C9,#6E7FF3) fixed;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+
+/*=====================
+    Demo - 3
+=======================*/
+
+.home-half-form {
+    padding: 160px 0px 125px 0px;
+    height: auto;
+}
+
+.custom-home-title {
+    font-size: 40px !important;
+}
+
+.form-home {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 11px 50px -15px rgba(0, 0, 0, 0.5) !important;
+    -moz-box-shadow: 0px 11px 50px -15px rgba(0, 0, 0, 0.5) !important;
+}
+
+.form-home h3 {
+    color: #949799;
+    font-size: 18px;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    margin-top: 0px;
+}
+
+.form-home input {
+    border: 1px solid #eee;
+    height: 40px;
+    box-shadow: none !important;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.form-home input:focus {
+    border-color: #000 !important;
+}
+
+
+/*========================
+        Demo- 4
+=========================*/
+
+.frame-border {
+    border: 8px solid rgba(255, 255, 255, 0.2);
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.video-wrapper iframe {
+    max-width: 100%;
+}
+
+/*========================
+    3.Services
+=========================*/
+
+.service-boxed {
+    border: 1px solid #ececec;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.service-body h5 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.service-body p {
+    margin-bottom: 0;
+    line-height: 26px;
+}
+
+.service-boxed i {
+    display: inline-block;
+    font-size: 30px;
+    width: 90px;
+    height: 90px;
+    line-height: 84px;
+    border: 5px solid #FFFFFF;
+    border-radius: 50%;
+    box-shadow: 0 0 3px #bbb;
+    transition: all 0.3s;
+    background-color: #fff;
+}
+
+.service-boxed i:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
+    color: #fff !important;
+    box-shadow: 0 0 3px #6362b8;
+}
+
+/*==================
+    4.Features
+===================*/
+
+.more-features {
+    padding: 40px 0;
+}
+
+.more-features i {
+    font-size: 50px;
+}
+
+.preference-subtitle {
+    line-height: 24px;
+}
+
+.preference-more {
+    margin-top: 25px;
+    display: block;
+}
+
+
+/*================
+  5. Video landing
+==================*/
+
+.bg-video-img {
+    background: url('../images/bg-video.jpg');
+    position: relative;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+.play-video-btn {
+    height: 80px;
+    width: 80px;
+    font-size: 36px;
+    line-height: 78px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 2px solid #fff;
+    margin-top: 30px;
+    transition: all .8s ease;
+}
+
+.play-video-btn:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.video-title-width {
+    max-width: 580px
+}
+
+/*========================
+    6.Pricing
+=========================*/
+
+.program-box {
+    border-radius: 5px;
+    border: 2px solid transparent;
+}
+
+.pricing-heading {
+    background-color: #000;
+}
+
+.price-box span {
+    font-size: 20px;
+}
+
+/*=================
+    8.Team
+===================*/
+
+.team-subtitle {
+    font-size: 22px;
+}
+
+.team-box {
+    background-color: #ffffff;
+}
+
+.team-desc {
+    line-height: 26px;
+    font-size: 14px;
+}
+
+.team-info small {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.team-social li a {
+    color: #000;
+    transition: all 0.52s;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+/**********************
+    9.Subscribe
+***********************/
+
+.search-form input {
+    padding: 14px 20px;
+    width: 100%;
+    font-size: 18px;
+    color: #4c5667 !important;
+    border: none;
+    outline: none !important;
+    padding-right: 180px;
+    padding-left: 30px;
+    border-radius: 30px;
+}
+
+.search-form button {
+    position: absolute;
+    top: 0px;
+    right: -2px;
+    outline: none !important;
+    border-radius: 30px;
+    font-size: 17px;
+    padding: 14px 30px;
+}
+
+.search-form form {
+    position: relative;
+    max-width: 600px;
+    margin: 0px auto;
+}
+
+/*================
+ 10.More Fratures
+==================*/
+
+.features-border {
+    border: 1px solid transparent;
+}
+
+/*==================
+   11. Testimonial
+===================*/
+
+.bg-testimonial {
+    background: url('../images/bg-testimonial.jpg');
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.testi-img img {
+    border: 5px solid #fff;
+    border-radius: 50%;
+    height: 100px;
+}
+
+.testi-desc {
+    margin-top: 30px;
+}
+
+.testimonial-box p {
+    font-size: 16px;
+}
+
+.owl-theme .owl-controls .owl-page span {
+    display: block;
+    width: 11px;
+    height: 11px;
+    margin: 5px 7px;
+    filter: Alpha(Opacity=50);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    opacity: 0.5;
+    transform: rotate(45deg);
+    border-radius: 0px;
+    -webkit-transition: all 0.2s ease 0s;
+}
+
+/*===================
+   12.  About Us
+=====================*/
+
+.bg-sub-page-home {
+    background: url('../images/bg-pattern.png');
+    position: relative;
+    background-position: center center;
+}
+
+.heading-half {
+    padding: 130px 0;
+    height: auto;
+}
+
+
+.page-next a,
+.page-next span {
+    font-size: 12px;
+    padding-left: 8px;
+    letter-spacing: 2px;
+    padding-right: 8px;
+    text-transform: uppercase;
+    color: rgba(255, 247, 247, 0.9);
+}
+
+.page-next-level h4 {
+    font-size: 36px;
+    color: #ffffff;
+}
+
+.vision-desc,
+.mission-desc p {
+    font-size: 15px;
+    line-height: 26px;
+}
+
+.about-bg-img {
+    background-image: url("../images/bg-about-img-1.jpg");
+    position: relative;
+    background-size: cover;
+}
+
+.about_bg_color {
+    padding: 50px;
+    background-color: #f8f9fa;
+}
+
+.about-content i {
+    font-size: 40px;
+}
+
+.about-service {
+    margin-top: 40px;
+}
+
+.about-icon i {
+    font-size: 44px;
+    line-height: 60px;
+}
+
+.about-story {
+    font-size: 15px;
+    line-height: 28px;
+    margin-top: 25px;
+}
+
+
+/*====================
+   13. Contact Us
+=====================*/
+
+.contact-info {
+    background: #f8f9fa;
+    border: 1px solid #cec9c9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-info i {
+    color: #09232f;
+    font-size: 34px;
+}
+
+.custom-form label {
+    font-size: 15px;
+}
+
+.custom-form .form-control {
+    margin-bottom: 25px;
+    height: 48px;
+    border: 1px solid #dbe0e8;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.custom-form .form-control:focus {
+    border-color: #a0a0a0 !important;
+}
+
+.custom-form textarea.form-control {
+    height: auto;
+}
+
+.custom-form label {
+    font-size: 15px;
+}
+
+.error {
+    margin: 8px 0px;
+    display: none;
+    color: red;
+}
+
+#ajaxsuccess {
+    font-size: 16px;
+    width: 100%;
+    display: none;
+    clear: both;
+    margin: 8px 0px;
+}
+
+.error_message {
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 2px solid #f36270;
+    color: #f36270;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.contact-loader {
+    display: none;
+}
+
+#success_page {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#success_page h3 {
+    color: #0dba26;
+    font-size: 22px;
+}
+
+
+/*=========================
+    14. Faq Accourdian 
+==========================*/
+
+.bg-about-custom {
+    background-color: rgba(255, 193, 7, 0.8);
+}
+
+.custom-faq h4 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+.custom-faq p {
+    line-height: 24px;
+    color: #6f6a6a;
+}
+
+.custom-faq .underline {
+    clear: both;
+    position: relative;
+    margin: 40px 0;
+    border-top: 1px solid #eee;
+}
+
+
+/*=========================
+    15. Job Open
+==========================*/
+
+.job-box ul li {
+    position: relative;
+    padding: 15px 0;
+    transition: all 0.3s;
+    color: #bdbdbd;
+    border-bottom: 1px solid #eee;
+}
+
+.job-box li a {
+    color: #444;
+}
+
+.job-title {
+    color: #222;
+    font-size: 22px;
+    padding-bottom: 15px;
+}
+
+
+/*========================
+    16. Sub Services
+=========================*/
+
+.serevice-box {
+    border: 1px solid #ededed;
+}
+
+.serevice-box-icon i {
+    font-size: 38px;
+}
+
+.serevice-box h4 {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.serevice-box p {
+    line-height: 25px;
+}
+
+.follow-desc {
+    font-size: 18px;
+    line-height: 35px;
+}
+
+.follow-desc a {
+    border: 2px solid #6c678f;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+    color: #6c678f;
+    border-radius: 50%;
+    font-size: 24px;
+    margin-right: 10px;
+    position: relative;
+    top: 5px;
+}
+
+
+/*====================
+      17.Client   
+======================*/
+
+.client-images img {
+    max-height: 90px;
+    width: auto !important;
+    margin: 10px auto;
+    opacity: 0.3;
+    transition: all 0.5s;
+}
+
+.client-images img:hover {
+    opacity: 0.6;
+}
+
+
+/*====================
+      18.Footer   
+======================*/
+
+.footer {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer .footer-list li a {
+    color: rgba(255, 255, 255, 0.5);
+    transition: all 0.5s;
+    line-height: 30px;
+}
+
+.footer .footer-list li a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer .footer-list li {
+    margin-bottom: 5px;
+}
+
+.footer-social li a i {
+    font-size: 20px;
+    color: #fff;
+    border-radius: 50%;
+    border: 2px solid;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 36px;
+    margin-right: 3px;
+    display: inline-block;
+}
+
+.footer-social li a i.facebook {
+    background-color: #5472d2;
+    border-color: #5472d2;
+}
+
+.footer-social li a i.instagram {
+    background-color: #e43667;
+    border-color: #e43667;
+}
+
+.footer-social li a i.twitter {
+    background-color: #1DA1F2;
+    border-color: #1DA1F2;
+}
+
+.footer-social li a i.linkedin {
+    background-color: #0173B2;
+    border-color: #0173B2;
+}
+
+.footer-desc {
+    line-height: 26px;
+}
+
+.footer-border {
+    height: 1px;
+    background-color: #4a4a4a;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.subcribe-form {
+    height: 48px;
+    border: none;
+    border-radius: 0px;
+}
+
+.subcribe-btn {
+    background-color: #ffd800;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 16px;
+    border: 0px solid #ffd800;
+    color: #2d2d4c;
+    padding: 15px 24px 15px 24px;
+    text-transform: normal;
+    white-space: normal;
+    outline: none !important;
+}
+
+.footer-terms a {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+/*=====================
+    19. Log In Page
+======================*/
+
+.bg-login-form {
+    background: url('../images/bg-form.jpg');
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.intro-form input {
+    font-size: 14px;
+    border: 1px solid #eee;
+    height: 45px;
+    box-shadow: none !important;
+    margin-bottom: 26px;
+}
+
+.intro-form input:focus {
+    border-color: #000 !important;
+}
+
+
+/*=====================
+    20. Log In Page
+======================*/
+
+@media (max-width: 768px) {
+    .float-responsive.float-right,
+    .float-responsive.float-left {
+        float: none !important;
+        text-align: center;
+    }
+}
+
+@media (min-width: 767px) {
+    .home-flex.vertical-content {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        position: relative;
+    }
+    .vertical-content {
+        display: flex;
+    }
+    .features-desc h2 {
+        font-size: 26px;
+    }
+    .home-title {
+        font-size: 28px;
+    }
+    .home-sub-title {
+        font-size: 14px;
+    }
+    .navbar-light .logo {
+        line-height: 0px !important;
+        padding: 0px !important;
+    }
+    .play-position {
+        position: absolute;
+        left: 43%;
+        top: 27%;
+    }
+    .about_bg_color {
+        padding: 30px;
+    }
+    .about-bg-img .about-section {
+        padding: 0px;
+    }
+    .job-post-inner {
+        padding: 20px;
+    }
+    .pull-none {
+        text-align: center !important;
+        float: none !important;
+    }
+    .video-wrapper {
+        padding-top: 50px;
+    }
+}
