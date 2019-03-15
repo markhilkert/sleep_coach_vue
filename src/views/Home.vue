@@ -24,7 +24,6 @@
                                 <button v-on:click="endSleepGood()" class="btn btn-outline btn-rounded"><span>I slept well</span></button>
                                 <button v-on:click="endSleepBad()" class="btn btn-outline btn-rounded"><span>I slept poorly</span></button>
                               </div>
-
                           </div>
                       </div>
                   </div>
@@ -51,9 +50,7 @@
         <button class="btn btn-danger" v-on:click="endSleepGood()"> I slept poorly </button>
       </div>
 
-      <div>
-        <router-link v-bind:to="'/statistics/'"> See my Sleep Stats </router-link>
-      </div>
+
 
     </div>
   </div>
