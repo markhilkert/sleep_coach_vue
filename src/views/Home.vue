@@ -31,27 +31,6 @@
           </div>
       </section>
       <!-- Home end -->
-
-
-      <h1>Sleep Coach</h1>
-      <div>
-        <button class="btn btn-primary" v-on:click="startSleep()"> Begin Sleeping </button>
-      </div>
-        
-      <div v-if="this.sleeping">
-        <h2>You are now sleeping.</h2>
-      </div>
-      
-      <div>
-        <button class="btn btn-success" v-on:click="endSleepGood()"> I slept well </button>
-      </div>
-
-      <div>
-        <button class="btn btn-danger" v-on:click="endSleepGood()"> I slept poorly </button>
-      </div>
-
-
-
     </div>
   </div>
 </template>
