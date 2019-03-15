@@ -28,40 +28,14 @@
             <div id="navigation">
                 <!-- Navigation Menu-->
                 <ul class="navigation-menu">
+                    
+                    <li class="">
+                        <router-link to="/">Start Sleeping</router-link>
+                    </li>
+
                     <li class="has-submenu">
                         <a href="#home">Home</a>
                         <span class="menu-arrow"></span>
-                        <ul class="submenu">
-                            <li>
-                                <a href="index.html">Home Default </a>
-                            </li>
-                            <li>
-                                <a href="index-1.html"> Home Style - 1 </a>
-                            </li>
-                            <li class="has-submenu">
-                                <a href="index-2.html"> Home Style - 2 </a>
-                            </li>
-                            <li class="has-submenu">
-                                <a href="index-3.html"> Home Style - 3 </a>
-                            </li>
-                            <li class="has-submenu">
-                                <a href="index-4.html"> Home Style - 4 </a>
-                            </li>
-                            <li class="has-submenu">
-                                <a href="index-5.html"> Home Style - 5 </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="">
-                        <a href="#features">features</a>
-                    </li>
-                    <li class="">
-                        <a href="#pricing">Pricing</a>
-                    </li>
-                    <li class="has-submenu">
-                        <a href="#">Pages</a>
-                        <span class="menu-arrow"></span>
-
                         <ul class="submenu">
                             <li>
                                 <a href="about.html">About Us </a>
@@ -70,19 +44,7 @@
                                 <a href="contact.html">Contact Us</a>
                             </li>
                             <li class="has-submenu">
-                                <a href="services.html">Services</a>
-                            </li>
-                            <li class="has-submenu">
-                                <a href="login.html">Log In</a>
-                            </li>
-                            <li class="has-submenu">
-                                <a href="signup.html">Sign Up</a>
-                            </li>
-                            <li class="has-submenu">
                                 <a href="faq.html">FAQ</a>
-                            </li>
-                            <li class="has-submenu">
-                                <a href="job.html">Jobs</a>
                             </li>
                             <li class="has-submenu">
                                 <a href="#">Sub Menu</a>
@@ -94,8 +56,22 @@
                             </li>
                         </ul>
                     </li>
+
+                    <li class="">
+                        <router-link to="/statistics">See My Stats</router-link>
+                    </li>
+
                     <li class="">
                         <a href="contact.html">Contact</a>
+                    </li>
+
+
+                    <li class="">
+                        <router-link to="/login">Login</router-link>
+                    </li>
+
+                    <li class="">
+                        <router-link to="/logout">Logout</router-link>
                     </li>
 
                     <li class="">
