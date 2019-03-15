@@ -1,27 +1,36 @@
 <template>
   <div class="home">
     <div class="container">
-      <h1>Sleep Coach</h1>
-      <div>
-        <button class="btn btn-primary" v-on:click="startSleep()"> Begin Sleeping </button>
-      </div>
-        
-      <div v-if="this.sleeping">
-        <h2>You are now sleeping.</h2>
-      </div>
       
-      <div>
-        <button class="btn btn-success" v-on:click="endSleepGood()"> I slept well </button>
-      </div>
+      <!-- Home -->
+      <section class="home-height-full  bg-home-1" id="home">
+          <!-- <div class="bg-overlay"></div> -->
+          <div class="home-center">
+              <div class="home-desc-center">
+                  <div class="container">
+                      <div class="row justify-content-center">
+                          <div class="col-lg-10 text-center">
+                              <h6 class="home-title text-white">Sleep Coach</h6>
+                              <p class="pt-4 home-sub-title text-white mx-auto" v-if="!this.sleeping">Sleep well.</p>
+                              <div class="pt-4">
+                                  <button v-on:click="startSleep()" v-if="!this.sleeping"class="btn btn-outline btn-rounded"><span>Begin Sleeping</span></button>
+                              </div>
 
-      <div>
-        <button class="btn btn-danger" v-on:click="endSleepGood()"> I slept poorly </button>
-      </div>
+                              <div v-if="this.sleeping">
+                                <p class="pt-4 home-sub-title text-white mx-auto">You are now sleeping.</p>
+                              </div>
 
-      <div>
-        <router-link v-bind:to="'/statistics/'"> See my Sleep Stats </router-link>
-      </div>
-
+                              <div class="pt-4" v-if="this.sleeping">
+                                <button v-on:click="endSleepGood()" class="btn btn-outline btn-rounded"><span>I slept well</span></button>
+                                <button v-on:click="endSleepBad()" class="btn btn-outline btn-rounded"><span>I slept poorly</span></button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <!-- Home end -->
     </div>
   </div>
 </template>
