@@ -2,7 +2,7 @@
   <div id="app">
 
     <!-- Navigation Bar-->
-    <header id="topnav" class="bg-dark defaultscroll fixed-top sticky">
+    <header id="topnav" class="defaultscroll fixed-top sticky">
         <div class="container">
             <!-- Logo container-->
             <div>

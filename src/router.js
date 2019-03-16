@@ -6,6 +6,7 @@ import Login from './views/Login.vue';
 import Logout from './views/Logout.vue';
 import SleepInformation from './views/SleepInformation.vue';
 import Statistics from './views/Statistics.vue';
+import RealHome from './views/RealHome.vue';
 
 
 Vue.use(Router)
@@ -15,6 +16,7 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     { path: '/', name: 'home', component: Home },
+    { path: '/realhome', name: 'real-home', component: RealHome },
     { path: "/statistics", name: "statistics", component: Statistics },
     { path: '/login', name: 'login', component: Login },
     { path: '/logout', name: 'logout', component: Logout },
