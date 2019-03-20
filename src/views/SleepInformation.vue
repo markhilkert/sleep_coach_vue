@@ -76,16 +76,28 @@
                     <div class="service-boxed bg-white p-4">
                         <i class="mbri-globe service-icon font-weight-bold"></i>
                         <div class="service-body pt-3">
-                            <h5 class=""> <span class="">01.</span> Pre-Planning</h5>
-                            <form v-on:submit.prevent="submit()">
+                            <h5 class=""> <span class="">01.</span> Alcohol</h5>
+                            <form v-on:submit.prevent="submitAlcohol()">
 
                               <div class="form-group">
-                                <label>Did you sleep well last night? </label>
-                                <input class='form-control' type='text' v-model="sleep.good_sleep" placeholder="">
+                                <label>How many Drinks did you have last night? </label>
+                                <input class='form-control' type='text' v-model="sleep.alcohol.amount" placeholder="">
+                              </div>
+
+                              <div class="form-group">
+                                <label>What time did you have your last drink? </label>
+                                <input class='form-control' type='time' v-model="sleep.alcohol.time" placeholder="">
+                              </div>
+
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" v-model="sleep.alcohol.increased_impact" value="true" id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                  Check if you drank any hard liquor
+                                </label>
                               </div>
 
                               <div class="new-button">
-                                <input type="submit" value="Add Sleep Data" class="btn btn-primary">
+                                <input type="submit" value="Add Alcohol" class="btn btn-primary">
                               </div>
                             </form>
                         </div>
@@ -197,6 +209,21 @@ export default {
                     user_id: this.sleep.user_id
                     };
       axios.patch("/api/sleeps/" + this.sleep.id, params)
+        .then(response => {
+          this.$router.push("/");
+        }).catch(error => {
+          this.errors = error.response.data.errors;
+        });
+    },
+    submitAlcohol: function() {
+      var params = {
+                    amount: this.sleep.alcohol.amount,
+                    bath_before_bed: this.sleep.alcohol.time,
+                    increased_impact: this.sleep.alcohol.increased_impact,
+                    sleep_id: this.$route.params.id,
+                    user_id: this.sleep.user_id
+                    };
+      axios.post("/api/alcohols/", params)
         .then(response => {
           this.$router.push("/");
         }).catch(error => {
