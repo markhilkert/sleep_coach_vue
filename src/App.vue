@@ -30,7 +30,7 @@
                 <ul class="navigation-menu">
                     
                     <li class="">
-                        <router-link to="/">Start Sleeping</router-link>
+                        <router-link to="/sleep">Start Sleeping</router-link>
                     </li>
 
                     <li class="has-submenu">
