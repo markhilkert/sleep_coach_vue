@@ -2,6 +2,11 @@
   <div class="sleep-information">
 
     <div class='container'>
+
+      <ul>
+        <li v-for="error in errors"> {{ error }} </li>
+      </ul>
+
     <!-- How do work -->
     <section class="section services-wrapper">
         <div class="container">
@@ -108,10 +113,23 @@
                     <div class="service-boxed bg-white p-4">
                         <i class="mbri-calendar service-icon font-weight-bold"></i>
                         <div class="service-body pt-3">
-                            <h5 class=""> <span class="">02.</span> Perfect Design</h5>
-                            <p class="text-muted">
-                                Lorem ipsum dolor sit amet consectetuer adipiscing elit, Aenean commodo ligula eget dolor Aenean elight massa.
-                            </p>
+                            <h5 class=""> <span class="">02.</span> Exercise</h5>
+                            <form v-on:submit.prevent="submitExercise()">
+
+                              <div class="form-group">
+                                <label>What time did you exercise? </label>
+                                <input class='form-control' type='time' v-model="sleep.exercises.time" placeholder="">
+                              </div>
+
+                              <div class="form-group">
+                                <label>How long did you exercise for? </label>
+                                <input class='form-control' type='text' v-model="sleep.exercises.duration" placeholder="">
+                              </div>
+
+                              <div class="new-button">
+                                <input type="submit" value="Add Exercise" class="btn btn-primary">
+                              </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -130,13 +148,7 @@
         </div>
     </section>
   </div>
-    <!-- How do work end  -->
-
-    <ul>
-      <li v-for="error in errors"> {{ error }} </li>
-    </ul>
-
-       
+    <!-- How do work end  -->      
 
   </div>
 </template>
@@ -175,7 +187,7 @@ export default {
                         increased_impact: ""
                         },
 
-              exercise: {
+              exercises: {
                         duration: "",
                         time: ""
                         }
@@ -218,12 +230,26 @@ export default {
     submitAlcohol: function() {
       var params = {
                     amount: this.sleep.alcohol.amount,
-                    bath_before_bed: this.sleep.alcohol.time,
+                    time: this.sleep.alcohol.time,
                     increased_impact: this.sleep.alcohol.increased_impact,
                     sleep_id: this.$route.params.id,
                     user_id: this.sleep.user_id
                     };
       axios.post("/api/alcohols/", params)
+        .then(response => {
+          this.$router.push("/");
+        }).catch(error => {
+          this.errors = error.response.data.errors;
+        });
+    },
+    submitExercise: function() {
+      var params = {
+                    duration: this.sleep.exercises.duration,
+                    time: this.sleep.exercises.time,
+                    sleep_id: this.$route.params.id,
+                    user_id: this.sleep.user_id
+                    };
+      axios.post("/api/exercises/", params)
         .then(response => {
           this.$router.push("/");
         }).catch(error => {
