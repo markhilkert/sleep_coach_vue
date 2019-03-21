@@ -27,10 +27,21 @@
 
                         <form v-on:submit.prevent="submit()">
 
-                          <div class="form-group">
-                            <label>Did you sleep well last night? </label>
+                          <div class="form-check form-check-inline">
+                            <label> How did you feel when you woke up this morning?? </label>
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="sleptGood" value="option1">
+                            <label class="form-check-label" for="sleptGood" v-model="sleep.good_sleep">Good</label>
                             <input class='form-control' type='text' v-model="sleep.good_sleep" placeholder="">
                           </div>
+
+                          <div class="form-check form-check-inline">
+                            <label> How did you feel when you woke up this morning?? </label>
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="sleptBad" value="option1">
+                            <label class="form-check-label" for="sleptBad" v-model="sleep.good_sleep">Bad</label>
+                            <input class='form-control' type='text' v-model="sleep.good_sleep" placeholder="">
+                          </div>
+
+
 
                           <div class="form-group">
                             <label>Did you take a hot shower or bath before bed? </label>
