@@ -236,7 +236,7 @@
                               </div>
 
                               <div class="new-button">
-                                <input type="submit" value="Add Exercise" class="btn btn-primary">
+                                <input type="submit" value="Add Nap" class="btn btn-primary">
                               </div>
                             </form>
                         </div>
@@ -247,21 +247,21 @@
                     <div class="service-boxed bg-white p-4">
                         <i class="mbri-calendar service-icon font-weight-bold"></i>
                         <div class="service-body pt-3">
-                            <h5 class=""> Exercise </h5>
-                            <form v-on:submit.prevent="submitExercise()">
+                            <h5 class=""> Relax Before Bed </h5>
+                            <form v-on:submit.prevent="submitRelax()">
 
                               <div class="form-group">
-                                <label>What time did you exercise? </label>
-                                <input class='form-control' type='time' v-model="sleep.exercises.time" placeholder="">
+                                <label>What time did relax? </label>
+                                <input class='form-control' type='time' v-model="sleep.relax.time" placeholder="">
                               </div>
 
                               <div class="form-group">
-                                <label>How long did you exercise for? </label>
-                                <input class='form-control' type='text' v-model="sleep.exercises.duration" placeholder="">
+                                <label>How long did you relax for? </label>
+                                <input class='form-control' type='text' v-model="sleep.relax.duration" placeholder="">
                               </div>
 
                               <div class="new-button">
-                                <input type="submit" value="Add Exercise" class="btn btn-primary">
+                                <input type="submit" value="Add Relaxation" class="btn btn-primary">
                               </div>
                             </form>
                         </div>
@@ -336,6 +336,10 @@ export default {
                     duration: "",
                     time: ""
                     },
+              relax: {
+                           duration: "",
+                           time: ""
+                           }
               },
       errors: []
     };
@@ -458,7 +462,21 @@ export default {
         }).catch(error => {
           this.errors = error.response.data.errors;
         });
-    }
+    },
+    submitRelax: function() {
+      var params = {
+                    duration: this.sleep.relax.duration,
+                    time: this.sleep.relax.time,
+                    sleep_id: this.$route.params.id,
+                    user_id: this.sleep.user_id
+                    };
+      axios.post("/api/relaxes/", params)
+        .then(response => {
+          this.$router.push("/");
+        }).catch(error => {
+          this.errors = error.response.data.errors;
+        });
+    },
   }
 }
 </script>
