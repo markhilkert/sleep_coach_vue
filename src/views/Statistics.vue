@@ -46,15 +46,11 @@ export default {
 
     axios.get("/api/sleeps/")
       .then(response => {
-        this.sleeps = response.data;
-        var that = this;
-        response.data.forEach( function(sleep) {
-          that.chartOptions.series[0].data.push(sleep.hours_in_bed);
+        this.sleeps = response.data; 
+        response.data.forEach( sleep => {
+          this.chartOptions.series[0].data.push(sleep.hours_in_bed);
         });
       });
-    //   .then( this.sleeps.forEach(function(sleep) {
-    //   this.data.push(sleep.hours_in_bed);
-    // })).then( console.log(this.data));
 
     axios.get("/api/users/" + userId)
       .then(response => {
