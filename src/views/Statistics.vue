@@ -9,12 +9,15 @@
       <div>
         <h2>On average, you spend {{ user.average_total_sleep_time }} in bed. </h2>
       </div>
+
+      <highcharts :options="chartOptions"></highcharts>
     </div>
   </div>
 </template>
 
 <script>
 import axios from "axios";
+
 
 export default {
   data: function() {
@@ -25,7 +28,12 @@ export default {
         average_total_sleep_time: ""
       },
       errors: [],
-      sleeping: false
+      sleeping: false,
+      chartOptions: {
+        series: [{
+          data: [] 
+        }]
+      }
     };
   },
   created: function() {
@@ -39,7 +47,14 @@ export default {
     axios.get("/api/sleeps/")
       .then(response => {
         this.sleeps = response.data;
-    });
+        var that = this;
+        response.data.forEach( function(sleep) {
+          that.chartOptions.series[0].data.push(sleep.hours_in_bed);
+        });
+      });
+    //   .then( this.sleeps.forEach(function(sleep) {
+    //   this.data.push(sleep.hours_in_bed);
+    // })).then( console.log(this.data));
 
     axios.get("/api/users/" + userId)
       .then(response => {
