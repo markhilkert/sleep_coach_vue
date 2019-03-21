@@ -195,27 +195,79 @@
 
                 <div class="col-lg-4">
                     <div class="service-boxed bg-white p-4">
-                        <i class="mbri-layers service-icon font-weight-bold"></i>
+                        <i class="mbri-calendar service-icon font-weight-bold"></i>
                         <div class="service-body pt-3">
-                            <h5> Communication</h5>
-                            <p class="text-muted">
-                                Lorem ipsum dolor sit amet consectetuer adipiscing elit, Aenean/ commodo ligula eget dolor Aenean elight massa.
-                            </p>
+                            <h5 class=""> Exercise </h5>
+                            <form v-on:submit.prevent="submitExercise()">
+
+                              <div class="form-group">
+                                <label>What time did you exercise? </label>
+                                <input class='form-control' type='time' v-model="sleep.exercises.time" placeholder="">
+                              </div>
+
+                              <div class="form-group">
+                                <label>How long did you exercise for? </label>
+                                <input class='form-control' type='text' v-model="sleep.exercises.duration" placeholder="">
+                              </div>
+
+                              <div class="new-button">
+                                <input type="submit" value="Add Exercise" class="btn btn-primary">
+                              </div>
+                            </form>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-4">
                     <div class="service-boxed bg-white p-4">
-                        <i class="mbri-layers service-icon font-weight-bold"></i>
+                        <i class="mbri-calendar service-icon font-weight-bold"></i>
                         <div class="service-body pt-3">
-                            <h5> Communication</h5>
-                            <p class="text-muted">
-                                Lorem ipsum dolor sit amet consectetuer adipiscing elit, Aenean/ commodo ligula eget dolor Aenean elight massa.
-                            </p>
+                            <h5 class=""> Exercise </h5>
+                            <form v-on:submit.prevent="submitExercise()">
+
+                              <div class="form-group">
+                                <label>What time did you exercise? </label>
+                                <input class='form-control' type='time' v-model="sleep.exercises.time" placeholder="">
+                              </div>
+
+                              <div class="form-group">
+                                <label>How long did you exercise for? </label>
+                                <input class='form-control' type='text' v-model="sleep.exercises.duration" placeholder="">
+                              </div>
+
+                              <div class="new-button">
+                                <input type="submit" value="Add Exercise" class="btn btn-primary">
+                              </div>
+                            </form>
                         </div>
                     </div>
                 </div>
+
+                <div class="col-lg-4">
+                    <div class="service-boxed bg-white p-4">
+                        <i class="mbri-calendar service-icon font-weight-bold"></i>
+                        <div class="service-body pt-3">
+                            <h5 class=""> Exercise </h5>
+                            <form v-on:submit.prevent="submitExercise()">
+
+                              <div class="form-group">
+                                <label>What time did you exercise? </label>
+                                <input class='form-control' type='time' v-model="sleep.exercises.time" placeholder="">
+                              </div>
+
+                              <div class="form-group">
+                                <label>How long did you exercise for? </label>
+                                <input class='form-control' type='text' v-model="sleep.exercises.duration" placeholder="">
+                              </div>
+
+                              <div class="new-button">
+                                <input type="submit" value="Add Exercise" class="btn btn-primary">
+                              </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </section>
