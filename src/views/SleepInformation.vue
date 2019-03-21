@@ -222,17 +222,17 @@
                     <div class="service-boxed bg-white p-4">
                         <i class="mbri-calendar service-icon font-weight-bold"></i>
                         <div class="service-body pt-3">
-                            <h5 class=""> Exercise </h5>
-                            <form v-on:submit.prevent="submitExercise()">
+                            <h5 class=""> Naps </h5>
+                            <form v-on:submit.prevent="submitNap()">
 
                               <div class="form-group">
-                                <label>What time did you exercise? </label>
-                                <input class='form-control' type='time' v-model="sleep.exercises.time" placeholder="">
+                                <label>What time did take a nap? </label>
+                                <input class='form-control' type='time' v-model="sleep.naps.time" placeholder="">
                               </div>
 
                               <div class="form-group">
-                                <label>How long did you exercise for? </label>
-                                <input class='form-control' type='text' v-model="sleep.exercises.duration" placeholder="">
+                                <label>How long did you nap for? </label>
+                                <input class='form-control' type='text' v-model="sleep.naps.duration" placeholder="">
                               </div>
 
                               <div class="new-button">
@@ -331,7 +331,11 @@ export default {
               morning_sun: {
                            duration: "",
                            time: ""
-                           }
+                           },
+              naps: {
+                    duration: "",
+                    time: ""
+                    },
               },
       errors: []
     };
@@ -435,6 +439,20 @@ export default {
                     user_id: this.sleep.user_id
                     };
       axios.post("/api/morning_suns/", params)
+        .then(response => {
+          this.$router.push("/");
+        }).catch(error => {
+          this.errors = error.response.data.errors;
+        });
+    },
+    submitNap: function() {
+      var params = {
+                    duration: this.sleep.naps.duration,
+                    time: this.sleep.naps.time,
+                    sleep_id: this.$route.params.id,
+                    user_id: this.sleep.user_id
+                    };
+      axios.post("/api/naps/", params)
         .then(response => {
           this.$router.push("/");
         }).catch(error => {
