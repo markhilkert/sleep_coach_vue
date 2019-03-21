@@ -23,7 +23,7 @@
                 <div class="service-boxed bg-white p-4">
                     <i class="mbri-globe service-icon font-weight-bold"></i>
                     <div class="service-body pt-3">
-                        <h5 class=""> <span class="">01.</span> General </h5>
+                        <h5 class=""> General </h5>
 
                         <form v-on:submit.prevent="submit()">
 
@@ -81,7 +81,7 @@
                     <div class="service-boxed bg-white p-4">
                         <i class="mbri-globe service-icon font-weight-bold"></i>
                         <div class="service-body pt-3">
-                            <h5 class=""> <span class="">01.</span> Alcohol</h5>
+                            <h5 class=""> Alcohol</h5>
                             <form v-on:submit.prevent="submitAlcohol()">
 
                               <div class="form-group">
@@ -111,9 +111,41 @@
 
                 <div class="col-lg-4">
                     <div class="service-boxed bg-white p-4">
+                        <i class="mbri-globe service-icon font-weight-bold"></i>
+                        <div class="service-body pt-3">
+                            <h5 class=""> Caffeine </h5>
+                            <form v-on:submit.prevent="submitCaffeine()">
+
+                              <div class="form-group">
+                                <label>How many cups of coffee did you have yesterday? </label>
+                                <input class='form-control' type='text' v-model="sleep.caffeine.amount" placeholder="">
+                              </div>
+
+                              <div class="form-group">
+                                <label>What time did you have your last caffeinated beverage? </label>
+                                <input class='form-control' type='time' v-model="sleep.caffeine.time" placeholder="">
+                              </div>
+
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" v-model="sleep.caffeine.increased_impact" value="true" id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                  Check if your coffee was particularly strong (e.g., cold brew)
+                                </label>
+                              </div>
+
+                              <div class="new-button">
+                                <input type="submit" value="Add Caffeine" class="btn btn-primary">
+                              </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="service-boxed bg-white p-4">
                         <i class="mbri-calendar service-icon font-weight-bold"></i>
                         <div class="service-body pt-3">
-                            <h5 class=""> <span class="">02.</span> Exercise</h5>
+                            <h5 class="">  Exercise</h5>
                             <form v-on:submit.prevent="submitExercise()">
 
                               <div class="form-group">
@@ -133,11 +165,24 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-4">
                     <div class="service-boxed bg-white p-4">
                         <i class="mbri-layers service-icon font-weight-bold"></i>
                         <div class="service-body pt-3">
-                            <h5> <span class="">03.</span>Communication</h5>
+                            <h5> Communication</h5>
+                            <p class="text-muted">
+                                Lorem ipsum dolor sit amet consectetuer adipiscing elit, Aenean/ commodo ligula eget dolor Aenean elight massa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="service-boxed bg-white p-4">
+                        <i class="mbri-layers service-icon font-weight-bold"></i>
+                        <div class="service-body pt-3">
+                            <h5> Communication</h5>
                             <p class="text-muted">
                                 Lorem ipsum dolor sit amet consectetuer adipiscing elit, Aenean/ commodo ligula eget dolor Aenean elight massa.
                             </p>
@@ -182,6 +227,12 @@ export default {
               user_id: "",
               
               alcohol: {
+                        amount: "",
+                        time: "",
+                        increased_impact: ""
+                        },
+
+              caffeine: {
                         amount: "",
                         time: "",
                         increased_impact: ""
@@ -236,6 +287,21 @@ export default {
                     user_id: this.sleep.user_id
                     };
       axios.post("/api/alcohols/", params)
+        .then(response => {
+          this.$router.push("/");
+        }).catch(error => {
+          this.errors = error.response.data.errors;
+        });
+    },
+    submitCaffeine: function() {
+      var params = {
+                    amount: this.sleep.caffeine.amount,
+                    time: this.sleep.caffeine.time,
+                    increased_impact: this.sleep.caffeine.increased_impact,
+                    sleep_id: this.$route.params.id,
+                    user_id: this.sleep.user_id
+                    };
+      axios.post("/api/caffeines/", params)
         .then(response => {
           this.$router.push("/");
         }).catch(error => {
