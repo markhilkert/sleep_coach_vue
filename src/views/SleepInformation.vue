@@ -143,9 +143,36 @@
 
                 <div class="col-lg-4">
                     <div class="service-boxed bg-white p-4">
+                        <i class="mbri-globe service-icon font-weight-bold"></i>
+                        <div class="service-body pt-3">
+                            <h5 class=""> Late Meals </h5>
+                            <form v-on:submit.prevent="submitLateMeal()">
+
+                              <div class="form-group">
+                                <label>What time did you eat your late meal? </label>
+                                <input class='form-control' type='time' v-model="sleep.late_meal.time" placeholder="">
+                              </div>
+
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" v-model="sleep.late_meal.increased_impact" value="true" id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                  Check if you ate food that tends to cause you indigestion
+                                </label>
+                              </div>
+
+                              <div class="new-button">
+                                <input type="submit" value="Add Late Meal" class="btn btn-primary">
+                              </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="service-boxed bg-white p-4">
                         <i class="mbri-calendar service-icon font-weight-bold"></i>
                         <div class="service-body pt-3">
-                            <h5 class="">  Exercise</h5>
+                            <h5 class=""> Exercise </h5>
                             <form v-on:submit.prevent="submitExercise()">
 
                               <div class="form-group">
@@ -238,6 +265,12 @@ export default {
                         increased_impact: ""
                         },
 
+              late_meal: {
+                          amount: "",
+                          time: "",
+                          increased_impact: ""
+                          },
+
               exercises: {
                         duration: "",
                         time: ""
@@ -302,6 +335,21 @@ export default {
                     user_id: this.sleep.user_id
                     };
       axios.post("/api/caffeines/", params)
+        .then(response => {
+          this.$router.push("/");
+        }).catch(error => {
+          this.errors = error.response.data.errors;
+        });
+    },
+    submitLateMeal: function() {
+      var params = {
+                    amount: this.sleep.late_meal.amount,
+                    time: this.sleep.late_meal.time,
+                    increased_impact: this.sleep.late_meal.increased_impact,
+                    sleep_id: this.$route.params.id,
+                    user_id: this.sleep.user_id
+                    };
+      axios.post("/api/late_meals/", params)
         .then(response => {
           this.$router.push("/");
         }).catch(error => {
