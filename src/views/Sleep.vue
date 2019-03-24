@@ -46,14 +46,22 @@ export default {
               id: "",
               user_id: ""
               },
-      sleeping: false
+      sleeping: ""
     };
   },
   created: function() {
     var loggedIn = localStorage.getItem("loggedIn");
+    var userId = localStorage.getItem("userId");
+
     if (!loggedIn) {
       this.$router.push("/login/");
     };
+
+    axios.get("/api/users/" + userId)
+      .then(response => {
+        this.sleeping = response.data.sleeping;
+    });
+
   },
   methods: {
     startSleep: function() {
