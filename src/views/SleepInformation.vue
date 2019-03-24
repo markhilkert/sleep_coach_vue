@@ -387,7 +387,7 @@ export default {
                     };
       axios.patch("/api/sleeps/" + this.sleep.id, params)
         .then(response => {
-          this.$router.push("/sleeps/14/edit");
+          this.$router.push("/");
         }).catch(error => {
           this.errors = error.response.data.errors;
         });
