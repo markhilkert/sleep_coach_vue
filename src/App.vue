@@ -6,10 +6,10 @@
         <div class="container">
             <!-- Logo container-->
             <div>
-                <a href="index.html" class="logo text-uppercase">
-                    <img src="images/logo-light.png" alt="" class="logo-light" height="18" />
-                    <img src="images/logo-dark.png" alt="" class="logo-dark" height="18" />
-                </a>
+                <router-link to="/" class="logo text-uppercase">
+                    <img src="images/logo-light.png" alt="" class="logo-light" height="68" />
+                    <img src="images/logo-dark.png" alt="" class="logo-dark" height="68" />
+                </router-link>
             </div>
             <!-- End Logo container-->
             <div class="menu-extras">
@@ -59,10 +59,6 @@
 
                     <li class="">
                         <router-link to="/statistics">See My Stats</router-link>
-                    </li>
-
-                    <li class="">
-                        <a href="contact.html">Contact</a>
                     </li>
 
                     <li class="">
