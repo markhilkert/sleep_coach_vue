@@ -34,7 +34,7 @@
                     </li>
 
                     <li class="has-submenu">
-                        <a href="#home">Home</a>
+                        <router-link to="/">Home</router-link>
                         <span class="menu-arrow"></span>
                         <ul class="submenu">
                             <li>
@@ -63,6 +63,10 @@
 
                     <li class="">
                         <a href="contact.html">Contact</a>
+                    </li>
+
+                    <li class="">
+                        <router-link to="/twelve-sleep-habits">Sleep Habits</router-link>
                     </li>
 
 

@@ -7,6 +7,7 @@ import Logout from './views/Logout.vue';
 import SleepInformation from './views/SleepInformation.vue';
 import Statistics from './views/Statistics.vue';
 import Home from './views/Home.vue';
+import TwelveHabits from './views/TwelveHabits.vue';
 
 
 Vue.use(Router)
@@ -21,6 +22,7 @@ export default new Router({
     { path: '/login', name: 'login', component: Login },
     { path: '/logout', name: 'logout', component: Logout },
     { path: "/signup", name: "signup", component: Signup },
-    { path: "/sleeps/:id/edit", name: "sleep-information", component: SleepInformation }
+    { path: "/sleeps/:id/edit", name: "sleep-information", component: SleepInformation },
+    { path: "/twelve-sleep-habits", name: "sleep-habits", component: TwelveHabits }
   ]
 })
