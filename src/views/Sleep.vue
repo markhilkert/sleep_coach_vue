@@ -3,8 +3,7 @@
     <div class="container">
       
       <!-- Home -->
-      <section class="home-height-full  bg-home-1" id="home">
-          <!-- <div class="bg-overlay"></div> -->
+      <section class="home-height-full bg-sub-page-home" id="home">
           <div class="home-center">
               <div class="home-desc-center">
                   <div class="container">
@@ -61,7 +60,6 @@ export default {
       .then(response => {
         this.sleeping = response.data.sleeping;
     });
-
   },
   methods: {
     startSleep: function() {

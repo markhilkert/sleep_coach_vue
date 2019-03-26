@@ -4,7 +4,6 @@
       
       <!-- Home -->
       <section class="home-height-full bg-home-1" id="home">
-          <!-- <div class="bg-overlay"></div> -->
           <div class="home-center">
               <div class="home-desc-center">
                   <div class="container">
@@ -131,24 +130,24 @@
                       <div class="col-lg-12 text-center">
                           <div class="section-title text-center mx-auto">
                               <h3 class="mb-4">Meet Our Team</h3>
-                              <p class="text-muted">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born.</p>
                           </div>
                       </div>
                   </div>
                   <div class="row mt-5">
-                      <div class="col-lg-12">
+                    <div class="col-lg-4"> </div>
+                      <div class="col-lg-4">
                           <div class="team-box">
                               <img src="images/team/team-3.jpg" alt="" class="img-fluid team-img rounded" id="mark-photo">
                               <div class="team-info p-4">
                                   <div class="text-center">
                                       <h5 class="font-weight-light">Mark Hilkert</h5>
-                                      <p class="text-uppercase text-muted"><small>CEO / Founder </small></p>
+                                      <p class="text-uppercase text-muted"><small>CEO / Founder / Guinea Pig </small></p>
                                       <p class="team-desc">Mark got interested in helping others sleep better after struggling with insomnia. He lives with his beautiful wife and silly dog. </p>
                                   </div>
                                   <div>
                                       <ul class="list-inline team-social mt-4 mb-0 text-center">
                                           <li class="list-inline-item"><a href="https://www.linkedin.com/in/markhilkert/"><i class="mdi mdi-linkedin"></i></a></li>
-                                          <li class="list-inline-item"><a href="#"><i class="mdi mdi-twitter"></i></a></li>
+                                          <li class="list-inline-item"><a href="mailto: mark.hilkert@gmail.com"><i class="mdi mdi-email"></i></a></li>
                                       </ul>
                                   </div>
                               </div>
@@ -167,7 +166,7 @@
 </template>
 
 <style>
-  #title-text { margin-top: 400px;}
+  #title-text { margin-top: 575px;}
   #mark-photo { 
                 margin-left: auto;
                 margin-right: auto;
