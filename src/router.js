@@ -10,6 +10,7 @@ import Home from './views/Home.vue';
 import TwelveHabits from './views/TwelveHabits.vue';
 import About from './views/About.vue';
 import ContactUs from './views/ContactUs.vue';
+import FAQ from './views/FAQ.vue';
 
 
 
@@ -28,6 +29,7 @@ export default new Router({
     { path: "/sleeps/:id/edit", name: "sleep-information", component: SleepInformation },
     { path: "/about", name: "about", component: About },
     { path: "/contact", name: "contact-us", component: ContactUs },
+    { path: "/faq", name: "faq", component: FAQ },
     { path: "/twelve-sleep-habits", name: "sleep-habits", component: TwelveHabits }
   ]
 })

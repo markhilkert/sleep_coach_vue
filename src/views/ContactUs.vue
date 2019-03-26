@@ -80,19 +80,24 @@
               </div>
 
               <div class="row justify-content-center mt-5">
+                    <div>
+                      <ul>
+                        <li v-for="error in errors">{{ error }}</li>
+                      </ul>
+                    </div>
                     <div class="col-lg-10">
                       <div class="custom-form mt-4">
                           <div id="message"></div>
-                          <form method="post" action="php/contact.php" name="contact-form" id="contact-form">
+                          <form v-on:submit.prevent="submit()" name="contact-form" id="contact-form">
                               <div class="row">
                                   <div class="col-lg-6">
                                       <div class="form-group">                                            
-                                          <input name="name" id="name" type="text" class="form-control" placeholder="Your name..." >
+                                          <input v-model="formName" id="name" type="text" class="form-control" placeholder="Your name..." >
                                       </div>
                                   </div>
                                   <div class="col-lg-6">
                                       <div class="form-group">
-                                          <input name="email" id="email" type="email" class="form-control" placeholder="Your email..." >
+                                          <input v-model="formEmail" id="email" type="email" class="form-control" placeholder="Your email..." >
                                       </div>
                                   </div>
                               </div>
@@ -100,7 +105,7 @@
                               <div class="row">
                                   <div class="col-lg-12">
                                       <div class="form-group">
-                                          <input name="text" id="sub" type="text" class="form-control" placeholder="Your subject..." >
+                                          <input v-model="formSubject" id="sub" type="text" class="form-control" placeholder="Your subject..." >
                                       </div>
                                   </div>
                               </div>
@@ -108,7 +113,7 @@
                               <div class="row">
                                   <div class="col-lg-12">
                                       <div class="form-group">
-                                          <textarea name="comments" id="comments" rows="4" class="form-control" placeholder="Your message..."></textarea>
+                                          <textarea v-model="formBody" id="comments" rows="4" class="form-control" placeholder="Your message..."></textarea>
                                       </div>
                                   </div>
                               </div>
@@ -142,10 +147,27 @@ import axios from "axios";
 export default {
   data: function() {
     return {
-      errors: [],
+      formName: "",
+      formEmail: "",
+      formSubject: "",
+      formBody: "",
+      errors: []
     };
   },
   created: function() {},
-  methods: {}
+  methods: {
+    submit: function() {
+      // trigger when form is submitted
+      // axios call
+      axios
+      .post("/api/contact_form")
+      .then(response => {
+        console.log(response.data);
+        this.$router.push("/");
+      }).catch(errors => {
+        this.errors = errors.response.data.errors;
+      });
+    }
+  }
 };
 </script>
