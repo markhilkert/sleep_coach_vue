@@ -9,6 +9,8 @@ import Statistics from './views/Statistics.vue';
 import Home from './views/Home.vue';
 import TwelveHabits from './views/TwelveHabits.vue';
 import About from './views/About.vue';
+import ContactUs from './views/ContactUs.vue';
+
 
 
 Vue.use(Router)
@@ -25,6 +27,7 @@ export default new Router({
     { path: "/signup", name: "signup", component: Signup },
     { path: "/sleeps/:id/edit", name: "sleep-information", component: SleepInformation },
     { path: "/about", name: "about", component: About },
+    { path: "/contact", name: "contact-us", component: ContactUs },
     { path: "/twelve-sleep-habits", name: "sleep-habits", component: TwelveHabits }
   ]
 })

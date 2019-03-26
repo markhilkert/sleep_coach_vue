@@ -41,7 +41,7 @@
                                 <router-link to="/about">About Us </router-link>
                             </li>
                             <li>
-                                <a href="contact.html">Contact Us</a>
+                                <router-link to="/contact">Contact Us</router-link>
                             </li>
                             <li class="has-submenu">
                                 <a href="faq.html">FAQ</a>
