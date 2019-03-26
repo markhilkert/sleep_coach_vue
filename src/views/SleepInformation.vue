@@ -19,33 +19,38 @@
                 </div>
             </div>
 
-            <div class="col-lg-12">
+            <div class="col-lg-6">
                 <div class="service-boxed bg-white p-4">
                     <i class="mbri-globe service-icon font-weight-bold"></i>
                     <div class="service-body pt-3">
                         <h5 class=""> General </h5>
 
-                        <form v-on:submit.prevent="submit()">
+                        <form class="text-left" v-on:submit.prevent="submit()">
+                          <div class="form-group"> 
+                            <label> How did you feel when you woke up this morning? </label>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="sleepWell" id="showered" v-model="sleep.good_sleep" v-bind:value="true">
+                              <label class="form-check-label" for="sleptGood">Good</label>
+                            </div>
 
-                          <div class="form-check form-check-inline">
-                            <label> How did you feel when you woke up this morning?? </label>
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="sleptGood" value="option1">
-                            <label class="form-check-label" for="sleptGood" v-model="sleep.good_sleep">Good</label>
-                            <input class='form-control' type='text' v-model="sleep.good_sleep" placeholder="">
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="sleepWell" id="notShowered" v-model="sleep.good_sleep" v-bind:value="false">
+                              <label class="form-check-label" for="sleptBad">Bad</label>
+                            </div>
                           </div>
-
-                          <div class="form-check form-check-inline">
-                            <label> How did you feel when you woke up this morning?? </label>
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="sleptBad" value="option1">
-                            <label class="form-check-label" for="sleptBad" v-model="sleep.good_sleep">Bad</label>
-                            <input class='form-control' type='text' v-model="sleep.good_sleep" placeholder="">
-                          </div>
-
 
 
                           <div class="form-group">
                             <label>Did you take a hot shower or bath before bed? </label>
-                            <input class='form-control' type='text' v-model="sleep.bath_before_bed" placeholder="">
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="shower" id="sleptGood" v-model="sleep.bath_before_bed" v-bind:value="true">
+                              <label class="form-check-label" for="sleptGood">Yes</label>
+                            </div>
+
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="shower" id="sleptBad" v-model="sleep.bath_before_bed" v-bind:value="false">
+                              <label class="form-check-label" for="sleptBad">No</label>
+                            </div>
                           </div>
 
                           <div class="form-group">
