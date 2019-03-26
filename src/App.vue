@@ -38,7 +38,7 @@
                         <span class="menu-arrow"></span>
                         <ul class="submenu">
                             <li>
-                                <a href="about.html">About Us </a>
+                                <router-link to="/about">About Us </router-link>
                             </li>
                             <li>
                                 <a href="contact.html">Contact Us</a>
