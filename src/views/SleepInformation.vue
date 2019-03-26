@@ -8,87 +8,145 @@
       </ul>
 
     <!-- How do work -->
-    <section class="section services-wrapper">
+    <section class="section services-wrapper bg-sub-page-home">
+
+      <div v-if="sleepSubmit" class="alert alert-success" aria-label="Close" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" @click="this.sleepSubmit = false">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        Thanks for submitting your general sleep information.
+      </div>
+
+      <div v-if="alcoholSubmit" class="alert alert-success" aria-label="Close" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" @click="this.alcoholSubmit = false">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        Thanks for submitting your alcohol information.
+      </div>
+
         <div class="container">
+            
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="section-title mx-auto">
-                        <h3 class="mb-4">How did you sleep last night?</h3>
-                        <p class="text-muted"> [maybe add txt] </p>
+                        <h3 id="edit-title" class="mb-4" style="color: white;">How did you sleep last night?</h3>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-6">
-                <div class="service-boxed bg-white p-4">
-                    <i class="mbri-globe service-icon font-weight-bold"></i>
-                    <div class="service-body pt-3">
-                        <h5 class=""> General </h5>
+            <div class="row mt-5">
+              <div class="col-lg-3"> </div>
+              <div class="col-lg-6">
+                  <div class="service-boxed bg-white p-4">
+                      <i class="mbri-globe service-icon font-weight-bold"></i>
+                      <div class="service-body pt-3">
+                          <h5 class=""> General </h5>
 
-                        <form class="text-left" v-on:submit.prevent="submit()">
-                          <div class="form-group"> 
-                            <label> How did you feel when you woke up this morning? </label>
-                            <div class="form-check">
-                              <input class="form-check-input" type="radio" name="sleepWell" id="showered" v-model="sleep.good_sleep" v-bind:value="true">
-                              <label class="form-check-label" for="sleptGood">Good</label>
+                          <form class="text-left" v-on:submit.prevent="submit()">
+                            <div class="form-group"> 
+                              <label> How did you feel when you woke up this morning? </label>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="sleepWell" id="showered" v-model="sleep.good_sleep" v-bind:value="true">
+                                <label class="form-check-label" for="sleptGood">Good</label>
+                              </div>
+
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="sleepWell" id="notShowered" v-model="sleep.good_sleep" v-bind:value="false">
+                                <label class="form-check-label" for="sleptBad">Bad</label>
+                              </div>
                             </div>
 
-                            <div class="form-check">
-                              <input class="form-check-input" type="radio" name="sleepWell" id="notShowered" v-model="sleep.good_sleep" v-bind:value="false">
-                              <label class="form-check-label" for="sleptBad">Bad</label>
+
+                            <div class="form-group">
+                              <label>Did you take a hot shower or bath before bed? </label>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="shower" id="sleptGood" v-model="sleep.bath_before_bed" v-bind:value="true">
+                                <label class="form-check-label" for="sleptGood">Yes</label>
+                              </div>
+
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="shower" id="sleptBad" v-model="sleep.bath_before_bed" v-bind:value="false">
+                                <label class="form-check-label" for="sleptBad">No</label>
+                              </div>
                             </div>
-                          </div>
 
+                            <div class="form-group">
+                              <label> Was your bedroom completely dark? </label>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="dark" id="Dark" v-model="sleep.dark_room" v-bind:value="true">
+                                <label class="form-check-label" for="Dark">Yes</label>
+                              </div>
 
-                          <div class="form-group">
-                            <label>Did you take a hot shower or bath before bed? </label>
-                            <div class="form-check">
-                              <input class="form-check-input" type="radio" name="shower" id="sleptGood" v-model="sleep.bath_before_bed" v-bind:value="true">
-                              <label class="form-check-label" for="sleptGood">Yes</label>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="dark" id="notDark" v-model="sleep.dark_room" v-bind:value="false">
+                                <label class="form-check-label" for="notDark">No</label>
+                              </div>
                             </div>
 
-                            <div class="form-check">
-                              <input class="form-check-input" type="radio" name="shower" id="sleptBad" v-model="sleep.bath_before_bed" v-bind:value="false">
-                              <label class="form-check-label" for="sleptBad">No</label>
+                            <div class="form-group">
+                              <label> Did you feel cool (temperature) while you slept? </label>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="temp" id="cool" v-model="sleep.cool_room" v-bind:value="true">
+                                <label class="form-check-label" for="cool">Yes</label>
+                              </div>
+
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="temp" id="notCool" v-model="sleep.cool_room" v-bind:value="false">
+                                <label class="form-check-label" for="notCool">No</label>
+                              </div>
                             </div>
-                          </div>
 
-                          <div class="form-group">
-                            <label> Was your bedroom completely dark? </label>
-                            <input class='form-control' type='text' v-model="sleep.dark_room" placeholder="">
-                          </div>
+                            <div class="form-group">
+                              <label> Were any clock faces visible from your bed? </label>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="clock" id="clock" v-model="sleep.clock_visible" v-bind:value="true">
+                                <label class="form-check-label" for="clock">Yes</label>
+                              </div>
 
-                          <div class="form-group">
-                            <label>Did you feel cool (temperature) while you slept? </label>
-                            <input class='form-control' type='text' v-model="sleep.cool_room" placeholder="">
-                          </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="clock" id="noClock" v-model="sleep.clock_visible" v-bind:value="false">
+                                <label class="form-check-label" for="noClock">No</label>
+                              </div>
+                            </div>
 
-                          <div class="form-group">
-                            <label>Were any clock faces visible from your bed? </label>
-                            <input class='form-control' type='text' v-model="sleep.clock_visible" placeholder="">
-                          </div>
+                            <div class="form-group">
+                              <label> Did you have any electronics with screens in your bedroom? </label>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="electronics" id="electronics" v-model="sleep.electronics_in_room" v-bind:value="true">
+                                <label class="form-check-label" for="electronics">Yes</label>
+                              </div>
 
-                          <div class="form-group">
-                            <label>Did you have any electronics with screens in your bedroom? </label>
-                            <input class='form-control' type='text' v-model="sleep.electronics_in_room" placeholder="">
-                          </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="electronics" id="noElectronics" v-model="sleep.electronics_in_room" v-bind:value="false">
+                                <label class="form-check-label" for="noElectronics">No</label>
+                              </div>
+                            </div>
 
-                          <div class="form-group">
-                            <label>At any point, did you lie in bed awake longer than 20 minutes trying to fall asleep? </label>
-                            <input class='form-control' type='text' v-model="sleep.lie_in_bed" placeholder="">
-                          </div>
+                            <div class="form-group">
+                              <label> At any point, did you lie in bed awake longer than 20 minutes trying to fall asleep? </label>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="lieAwake" id="awake" v-model="sleep.lie_in_bed" v-bind:value="true">
+                                <label class="form-check-label" for="awake">Yes</label>
+                              </div>
 
-                          <div class="form-group">
-                            <label>What was the temperature of your room, in Fahrenheit? </label>
-                            <input class='form-control' type='text' v-model="sleep.room_temperature" placeholder="">
-                          </div>
-                          
-                          <div class="new-button">
-                            <input type="submit" value="Add Sleep Data" class="btn btn-primary">
-                          </div>
-                        </form>
-                    </div>
-                </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="lieAwake" id="noAwake" v-model="sleep.lie_in_bed" v-bind:value="false">
+                                <label class="form-check-label" for="noAwake">No</label>
+                              </div>
+                            </div>
+
+                            <div class="form-group">
+                              <label>What was the temperature of your room, in Fahrenheit? </label>
+                              <input class='form-control' type='text' v-model="sleep.room_temperature" placeholder="">
+                            </div>
+                            
+                            <div class="new-button">
+                              <input type="submit" value="Add Sleep Data" class="btn btn-primary">
+                            </div>
+                          </form>
+                      </div>
+                  </div>
+              </div>
             </div>
 
             <div class="row mt-5">
@@ -114,6 +172,7 @@
                                 <input class="form-check-input" type="checkbox" v-model="sleep.alcohol.increased_impact" value="true" id="defaultCheck1">
                                 <label class="form-check-label" for="defaultCheck1">
                                   Check if you drank any hard liquor
+                                  <br> <br> <br> <br> <br>
                                 </label>
                               </div>
 
@@ -146,6 +205,7 @@
                                 <input class="form-check-input" type="checkbox" v-model="sleep.caffeine.increased_impact" value="true" id="defaultCheck1">
                                 <label class="form-check-label" for="defaultCheck1">
                                   Check if your coffee was particularly strong (e.g., cold brew)
+                                  <br> <br>
                                 </label>
                               </div>
 
@@ -173,6 +233,7 @@
                                 <input class="form-check-input" type="checkbox" v-model="sleep.late_meal.increased_impact" value="true" id="defaultCheck1">
                                 <label class="form-check-label" for="defaultCheck1">
                                   Check if you ate food that tends to cause you indigestion
+                                  <br> <br> <br> <br> <br> <br> <br> 
                                 </label>
                               </div>
 
@@ -199,6 +260,7 @@
                               <div class="form-group">
                                 <label>How long did you exercise for? </label>
                                 <input class='form-control' type='text' v-model="sleep.exercises.duration" placeholder="">
+                                <br>
                               </div>
 
                               <div class="new-button">
@@ -249,6 +311,7 @@
                               <div class="form-group">
                                 <label>How long did you nap for? </label>
                                 <input class='form-control' type='text' v-model="sleep.naps.duration" placeholder="">
+                                <br>
                               </div>
 
                               <div class="new-button">
@@ -295,6 +358,14 @@
 
 
 <style>
+#edit-title { margin-top: 25px;}
+
+.alert{
+  position: fixed;
+  z-index: 9999;
+  width: 77%;
+}
+
 .new-button{
   text-align: center
 }
@@ -357,6 +428,7 @@ export default {
                            time: ""
                            }
               },
+      sleepSubmit: false,
       errors: []
     };
   },
@@ -387,7 +459,7 @@ export default {
                     };
       axios.patch("/api/sleeps/" + this.sleep.id, params)
         .then(response => {
-          this.$router.push("/");
+          this.sleepSubmit = true;
         }).catch(error => {
           this.errors = error.response.data.errors;
         });
@@ -402,7 +474,7 @@ export default {
                     };
       axios.post("/api/alcohols/", params)
         .then(response => {
-          this.$router.push("/");
+          // this.$router.push("/");
         }).catch(error => {
           this.errors = error.response.data.errors;
         });
@@ -417,7 +489,7 @@ export default {
                     };
       axios.post("/api/caffeines/", params)
         .then(response => {
-          this.$router.push("/");
+          // this.$router.push("/");
         }).catch(error => {
           this.errors = error.response.data.errors;
         });
@@ -432,7 +504,7 @@ export default {
                     };
       axios.post("/api/late_meals/", params)
         .then(response => {
-          this.$router.push("/");
+          // this.$router.push("/");
         }).catch(error => {
           this.errors = error.response.data.errors;
         });
@@ -446,7 +518,7 @@ export default {
                     };
       axios.post("/api/exercises/", params)
         .then(response => {
-          this.$router.push("/");
+          // this.$router.push("/");
         }).catch(error => {
           this.errors = error.response.data.errors;
         });
@@ -460,7 +532,7 @@ export default {
                     };
       axios.post("/api/morning_suns/", params)
         .then(response => {
-          this.$router.push("/");
+          // this.$router.push("/");
         }).catch(error => {
           this.errors = error.response.data.errors;
         });
@@ -474,7 +546,7 @@ export default {
                     };
       axios.post("/api/naps/", params)
         .then(response => {
-          this.$router.push("/");
+          // this.$router.push("/");
         }).catch(error => {
           this.errors = error.response.data.errors;
         });
@@ -488,7 +560,7 @@ export default {
                     };
       axios.post("/api/relaxes/", params)
         .then(response => {
-          this.$router.push("/");
+          // this.$router.push("/");
         }).catch(error => {
           this.errors = error.response.data.errors;
         });

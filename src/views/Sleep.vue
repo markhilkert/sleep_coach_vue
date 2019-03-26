@@ -59,7 +59,10 @@ export default {
     axios.get("/api/users/" + userId)
       .then(response => {
         this.sleeping = response.data.sleeping;
-    });
+        if (this.sleeping) { 
+          this.sleep.id = response.data.last_sleep_id
+        }
+      });
   },
   methods: {
     startSleep: function() {
