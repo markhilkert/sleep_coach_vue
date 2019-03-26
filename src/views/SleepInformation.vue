@@ -24,6 +24,48 @@
         Thanks for submitting your alcohol information.
       </div>
 
+      <div v-if="caffeineSubmit" class="alert alert-success" aria-label="Close" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" @click="this.caffeineSubmit = false">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        Thanks for submitting your caffeine information.
+      </div>
+
+      <div v-if="lateMealSubmit" class="alert alert-success" aria-label="Close" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" @click="this.lateMealSubmit = false">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        Thanks for submitting your late meal information.
+      </div>
+
+      <div v-if="exerciseSubmit" class="alert alert-success" aria-label="Close" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" @click="this.exerciseSubmit = false">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        Thanks for submitting your exercise information.
+      </div>
+
+      <div v-if="morningSunSubmit" class="alert alert-success" aria-label="Close" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" @click="this.morningSunSubmit = false">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        Thanks for submitting your morning sun information.
+      </div>
+
+      <div v-if="napSubmit" class="alert alert-success" aria-label="Close" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" @click="this.napSubmit = false">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        Thanks for submitting your nap information.
+      </div>
+
+      <div v-if="relaxSubmit" class="alert alert-success" aria-label="Close" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" @click="this.relaxSubmit = false">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        Thanks for submitting your relaxation information.
+      </div>
+
         <div class="container">
             
             <div class="row">
@@ -474,7 +516,7 @@ export default {
                     };
       axios.post("/api/alcohols/", params)
         .then(response => {
-          // this.$router.push("/");
+          this.alcoholSubmit = true;
         }).catch(error => {
           this.errors = error.response.data.errors;
         });
@@ -489,7 +531,7 @@ export default {
                     };
       axios.post("/api/caffeines/", params)
         .then(response => {
-          // this.$router.push("/");
+          this.caffeineSubmit = true;
         }).catch(error => {
           this.errors = error.response.data.errors;
         });
@@ -504,7 +546,7 @@ export default {
                     };
       axios.post("/api/late_meals/", params)
         .then(response => {
-          // this.$router.push("/");
+          this.lateMealSubmit = true;
         }).catch(error => {
           this.errors = error.response.data.errors;
         });
@@ -518,7 +560,7 @@ export default {
                     };
       axios.post("/api/exercises/", params)
         .then(response => {
-          // this.$router.push("/");
+          this.exerciseSubmit = true;
         }).catch(error => {
           this.errors = error.response.data.errors;
         });
@@ -532,7 +574,7 @@ export default {
                     };
       axios.post("/api/morning_suns/", params)
         .then(response => {
-          // this.$router.push("/");
+          this.morningSunSubmit = true;
         }).catch(error => {
           this.errors = error.response.data.errors;
         });
@@ -546,7 +588,7 @@ export default {
                     };
       axios.post("/api/naps/", params)
         .then(response => {
-          // this.$router.push("/");
+          this.napSubmit = true;
         }).catch(error => {
           this.errors = error.response.data.errors;
         });
@@ -560,7 +602,7 @@ export default {
                     };
       axios.post("/api/relaxes/", params)
         .then(response => {
-          // this.$router.push("/");
+          this.relaxSubmit = true;
         }).catch(error => {
           this.errors = error.response.data.errors;
         });
