@@ -49,23 +49,23 @@
                   <div class="col-lg-6 about-section">
                       <div class="about_bg_color">
                           <div class="row justify-content-center">
-                              <div class="col-lg-6">
-                                  <h3 class="title text-center mb-5">Track your Sleep.</h3>
+                              <div class="col-lg-8">
+                                  <h3 class="title text-center mb-5">Track the Things that Affect Your Sleep</h3>
                               </div>
                           </div>
                           <div class="row">
                               <div class="col-lg-5 col-md-12 mr-auto">
                                   <div class="about-content text-center">
                                       <i class="mbri-speed text-custom"></i>
-                                      <h5 class="pt-3">Strategy Solutions</h5>
-                                      <p class="pt-2" style=" line-height: 26px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+                                      <h5 class="pt-3">Sleep Quality</h5>
+                                      <p class="pt-2" style=" line-height: 26px;"> Sleep tracking with a twist: you decide whether you slept well, rather than listening to an algorithm. </p>
                                   </div>
                               </div>
                               <div class="col-lg-5 col-md-12">
                                   <div class="about-content text-center">
                                       <i class="mbri-sun2 text-custom"></i>
-                                      <h5 class="pt-3">Digital Design</h5>
-                                      <p class="pt-2" style=" line-height: 26px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+                                      <h5 class="pt-3">Sunlight Exposure</h5>
+                                      <p class="pt-2" style=" line-height: 26px;">Track whether you got sunlight exposure, how long, and what time. </p>
                                   </div>
                               </div>
                           </div>
@@ -73,15 +73,15 @@
                               <div class="col-lg-5 col-md-12 mr-auto">
                                   <div class="about-content text-center">
                                       <i class="mbri-rocket text-custom"></i>
-                                      <h5 class="pt-3">Dynamic Growth</h5>
-                                      <p class="pt-2" style=" line-height: 26px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+                                      <h5 class="pt-3">Caffeine Intake</h5>
+                                      <p class="pt-2" style=" line-height: 26px;">How much coffee did you have in a day? When did you have your last cup? </p>
                                   </div>
                               </div>
                               <div class="col-lg-5 col-md-12">
                                   <div class="about-content text-center">
                                       <i class="mbri-protect text-custom"></i>
-                                      <h5 class="pt-3">Best Ideas</h5>
-                                      <p class="pt-2" style=" line-height: 26px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+                                      <h5 class="pt-3">Alcohol Consumption</h5>
+                                      <p class="pt-2" style=" line-height: 26px;">Did you drink? How much? When did you stop? </p>
                                   </div>
                               </div>
                           </div>
@@ -99,143 +99,44 @@
               <div class="row">
                   <div class="col-lg-12 text-center">
                       <div class="section-title text-center mx-auto">
-                          <h3 class="mb-4">Creative Team</h3>
-                          <p class="text-muted">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born.</p>
+                          <h3 class="mb-4">Meet Our Creative Team</h3>
                       </div>
                   </div>
               </div>
               <div class="row mt-5">
-                  <div class="col-lg-3">
+                  <div class="col-lg-4"> </div>
+                  <div class="col-lg-4">
                       <div class="team-box">
                           <img src="images/team/team-3.jpg" alt="" class="img-fluid team-img rounded">
                           <div class="team-info p-4">
                               <div class="text-center">
-                                  <h5 class="font-weight-light">Terry Smith</h5>
-                                  <p class="text-uppercase text-muted"><small>CEO / Founder </small></p>
-                                  <p class="team-desc">Lorem ipsum dolor amet rawt consectetuer adipiscing.</p>
+                                  <h5 class="font-weight-light">Mark Hilkert</h5>
+                                  <p class="text-uppercase text-muted"><small>CEO / Founder / Guinea Pig </small></p>
+                                  <p class="team-desc">Current insomniac and former lawyer & chemical engineer turned coder, Mark wrote and tested Sleep Coach so you didn't have to.</p>
                               </div>
                               <div>
                                   <ul class="list-inline team-social mt-4 mb-0 text-center">
-                                      <li class="list-inline-item"><a href="#"><i class="mdi mdi-facebook"></i></a></li>
-                                      <li class="list-inline-item"><a href="#"><i class="mdi mdi-google"></i></a></li>
-                                      <li class="list-inline-item"><a href="#"><i class="mdi mdi-twitter"></i></a></li>
+                                      <li class="list-inline-item"><a href="https://www.linkedin.com/in/markhilkert"><i class="mdi mdi-linkedin"></i></a></li>
+                                      <li class="list-inline-item"><a href="mailto: mark.hilkert@gmail.com"><i class="mdi mdi-email"></i></a></li>
                                   </ul>
                               </div>
                           </div>
                       </div>
                   </div>
 
-                  <div class="col-lg-3">
-                      <div class="team-box">
-                          <img src="images/team/team-2.jpg" alt="" class="img-fluid team-img rounded">
-                          <div class="team-info p-4">
-                              <div class="text-center">
-                                  <h5 class="font-weight-light">Juliana Waddell</h5>
-                                  <p class="text-uppercase text-muted"><small> Founder</small></p>
-                                  <p class="team-desc">Lorem ipsum dolor amet rawt consectetuer adipiscing.</p>
-                              </div>
-                              <div>
-                                  <ul class="list-inline team-social mt-4 mb-0 text-center">
-                                      <li class="list-inline-item"><a href="#"><i class="mdi mdi-facebook"></i></a></li>
-                                      <li class="list-inline-item"><a href="#"><i class="mdi mdi-google"></i></a></li>
-                                      <li class="list-inline-item"><a href="#"><i class="mdi mdi-twitter"></i></a></li>
-                                  </ul>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="col-lg-3">
-                      <div class="team-box">
-                          <img src="images/team/team-5.jpg" alt="" class="img-fluid team-img rounded">
-                          <div class="team-info p-4">
-                              <div class="text-center">
-                                  <h5 class="font-weight-light">Andrew Sparks</h5>
-                                  <p class="text-uppercase text-muted"><small>Sr.Designer </small></p>
-                                  <p class="team-desc">Lorem ipsum dolor amet rawt consectetuer adipiscing.</p>
-                              </div>
-                              <div>
-                                  <ul class="list-inline team-social mt-4 mb-0 text-center">
-                                      <li class="list-inline-item"><a href="#"><i class="mdi mdi-facebook"></i></a></li>
-                                      <li class="list-inline-item"><a href="#"><i class="mdi mdi-google"></i></a></li>
-                                      <li class="list-inline-item"><a href="#"><i class="mdi mdi-twitter"></i></a></li>
-                                  </ul>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="col-lg-3">
-                      <div class="team-box">
-                          <img src="images/team/team-4.jpg" alt="" class="img-fluid team-img rounded">
-                          <div class="team-info p-4">
-                              <div class="text-center">
-                                  <h5 class="font-weight-light">Jennifer Lawson</h5>
-                                  <p class="text-uppercase text-muted"><small>Designer </small></p>
-                                  <p class="team-desc">Lorem ipsum dolor amet rawt consectetuer adipiscing.</p>
-                              </div>
-                              <div>
-                                  <ul class="list-inline team-social mt-4 mb-0 text-center">
-                                      <li class="list-inline-item"><a href="#"><i class="mdi mdi-facebook"></i></a></li>
-                                      <li class="list-inline-item"><a href="#"><i class="mdi mdi-google"></i></a></li>
-                                      <li class="list-inline-item"><a href="#"><i class="mdi mdi-twitter"></i></a></li>
-                                  </ul>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
               </div>
           </div>
       </section>
       <!-- Team end -->
-
 
       <!-- Client Slider -->
       <section class="section bg-light">
           <div class="container">
               <div class="col-lg-12 text-center">
                   <div class="section-title text-center mx-auto">
-                      <h3 class="mb-4">Trusted by Thousands</h3>
-                      <p class="text-muted">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born.</p>
+                      <h3 class="mb-4">Trusted by at least one person</h3>
+                      <p class="text-muted">(We'll leave it to you to guess who.)</p>
                   </div>
-              </div>
-              <div class="row mt-5">
-                  <div class="col-lg-2">
-                      <div class="client-images">
-                          <img src="images/clients/1.png" alt="logo-img" class="mx-auto img-fluid d-block">
-                      </div>
-                  </div>
-                  <!-- slider item -->
-                  <div class="col-lg-2">
-                      <div class="client-images">
-                          <img src="images/clients/2.png" alt="logo-img" class="mx-auto img-fluid d-block">
-                      </div>
-                  </div>
-                  <!-- slider item -->
-                  <div class="col-lg-2">
-                      <div class="client-images">
-                          <img src="images/clients/3.png" alt="logo-img" class="mx-auto img-fluid d-block">
-                      </div>
-                  </div>
-                  <!-- slider item -->
-                  <div class="col-lg-2">
-                      <div class="client-images">
-                          <img src="images/clients/4.png" alt="logo-img" class="mx-auto img-fluid d-block">
-                      </div>
-                  </div>
-                  <!-- slider item -->
-                  <div class="col-lg-2">
-                      <div class="client-images">
-                          <img src="images/clients/5.png" alt="logo-img" class="mx-auto img-fluid d-block">
-                      </div>
-                  </div>
-                  <!-- slider item -->
-                  <div class="col-lg-2">
-                      <div class="client-images">
-                          <img src="images/clients/6.png" alt="logo-img" class="mx-auto img-fluid d-block">
-                      </div>
-                  </div>
-                  <!-- slider item -->
               </div>
           </div>
       </section>
