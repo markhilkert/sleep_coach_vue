@@ -90,7 +90,7 @@ export default {
           localStorage.setItem("jwt", response.data.jwt);
           localStorage.setItem("userId", response.data.user_id);
           localStorage.setItem("loggedIn", true);
-          this.$router.push("/");
+          this.$router.push("/sleep");
         })
         .catch(error => {
           this.errors = ["Invalid email or password."];
