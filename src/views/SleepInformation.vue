@@ -11,56 +11,56 @@
     <section class="section services-wrapper bg-sub-page-home">
         <div class="row alert-container">
           <div v-if="sleepSubmit" class="alert alert-success col-10 offset-1" aria-label="Close" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close" @click="sleepSubmit = false">
+            <button type="button" class="close" @click="sleepSubmit = false">
               <span aria-hidden="true">&times;</span>
             </button>
             Thanks for submitting your general sleep information.
           </div>
 
-          <div v-if="alcoholSubmit" class="alert alert-success" aria-label="Close" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close" @click="this.alcoholSubmit = false">
+          <div v-if="alcoholSubmit" class="alert alert-success col-10 offset-1" aria-label="Close" role="alert">
+            <button type="button" class="close" @click="alcoholSubmit = false">
               <span aria-hidden="true">&times;</span>
             </button>
             Thanks for submitting your alcohol information.
           </div>
 
-          <div v-if="caffeineSubmit" class="alert alert-success" aria-label="Close" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close" @click="this.caffeineSubmit = false">
+          <div v-if="caffeineSubmit" class="alert alert-success col-10 offset-1" aria-label="Close" role="alert">
+            <button type="button" class="close" @click="caffeineSubmit = false">
               <span aria-hidden="true">&times;</span>
             </button>
             Thanks for submitting your caffeine information.
           </div>
 
-          <div v-if="lateMealSubmit" class="alert alert-success" aria-label="Close" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close" @click="this.lateMealSubmit = false">
+          <div v-if="lateMealSubmit" class="alert alert-success col-10 offset-1" aria-label="Close" role="alert">
+            <button type="button" class="close" @click="lateMealSubmit = false">
               <span aria-hidden="true">&times;</span>
             </button>
             Thanks for submitting your late meal information.
           </div>
 
-          <div v-if="exerciseSubmit" class="alert alert-success" aria-label="Close" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close" @click="this.exerciseSubmit = false">
+          <div v-if="exerciseSubmit" class="alert alert-success col-10 offset-1" aria-label="Close" role="alert">
+            <button type="button" class="close" @click="exerciseSubmit = false">
               <span aria-hidden="true">&times;</span>
             </button>
             Thanks for submitting your exercise information.
           </div>
 
-          <div v-if="morningSunSubmit" class="alert alert-success" aria-label="Close" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close" @click="this.morningSunSubmit = false">
+          <div v-if="morningSunSubmit" class="alert alert-success col-10 offset-1" aria-label="Close" role="alert">
+            <button type="button" class="close" @click="morningSunSubmit = false">
               <span aria-hidden="true">&times;</span>
             </button>
             Thanks for submitting your morning sun information.
           </div>
 
-          <div v-if="napSubmit" class="alert alert-success" aria-label="Close" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close" @click="this.napSubmit = false">
+          <div v-if="napSubmit" class="alert alert-success col-10 offset-1" aria-label="Close" role="alert">
+            <button type="button" class="close" @click="napSubmit = false">
               <span aria-hidden="true">&times;</span>
             </button>
             Thanks for submitting your nap information.
           </div>
 
-          <div v-if="relaxSubmit" class="alert alert-success" role="alert">
-            <button type="button" class="close" @click="this.relaxSubmit = false">
+          <div v-if="relaxSubmit" class="alert alert-success col-10 offset-1" role="alert">
+            <button type="button" class="close" @click="relaxSubmit = false">
               <span aria-hidden="true">&times;</span>
             </button>
             Thanks for submitting your relaxation information.
