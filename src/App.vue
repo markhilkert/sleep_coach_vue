@@ -29,9 +29,7 @@
                 <!-- Navigation Menu-->
                 <ul class="navigation-menu">
                     
-                    <li class="">
-                        <router-link to="/sleep">Start Sleeping</router-link>
-                    </li>
+
 
                     <li class="has-submenu">
                         <router-link to="/">Home</router-link>
@@ -46,15 +44,11 @@
                             <li class="has-submenu">
                                 <router-link to="/faq">FAQ</router-link>
                             </li>
-                            <li class="has-submenu">
-                                <a href="#">Sub Menu</a>
-                                <span class="menu-arrow submenu-arrow"></span>
-                                <ul class="submenu">
-                                    <li><a href="#">Sub Menu Item 1</a></li>
-                                    <li><a href="#">Sub Menu Item 2</a></li>
-                                </ul>
-                            </li>
                         </ul>
+                    </li>
+
+                    <li class="">
+                        <router-link to="/sleep">Start Sleeping</router-link>
                     </li>
 
                     <li class="">
