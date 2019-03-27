@@ -1,17 +1,50 @@
 <template>
-  <div class="home">
+  <div class="statistics">
     <div class="container">
-      <h1>Your Sleep Stats</h1>
-      <div>
-        <h2>Last night, you spent {{ user.last_night_sleep_time }} in bed. </h2>
-      </div>
+
+      <!-- home start -->
+      <section class="heading-half bg-sub-page-home">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-12 page-next-level text-center">
+                      <h4 class="pt-3">Your Sleep Statistics</h4>
+                  </div>                    
+              </div>
+          </div>
+      </section>
+      <!-- home end -->   
+
+      <!-- statistics start -->
+      <!-- Faq -->
+      <section class="section">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-12">
+                      <div class="custom-faq mt-3">
+
+                          <h2 class="mb-4 text-center">  &nbsp; Last night, you spent {{ user.last_night_sleep_time }} in bed. </h2>
+                          <div class="underline"></div>
+
+                          <h2 class="mb-4 text-center">  &nbsp; On average, you spend {{ user.average_total_sleep_time }} in bed. </h2>
+                          <div class="underline"></div>
+
+                          <highcharts :options="sleepTotal"></highcharts>
+                          <div class="underline"></div>
+                          <highcharts :options="caffeineTime"></highcharts>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <!-- Faq end -->
 
       <div>
-        <h2>On average, you spend {{ user.average_total_sleep_time }} in bed. </h2>
+        <h2> </h2>
       </div>
 
-      <highcharts :options="sleepTotal"></highcharts>
-      <highcharts :options="caffeineTime"></highcharts>
+
+      <!-- statistics end -->
+
     </div>
   </div>
 </template>

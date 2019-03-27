@@ -1,5 +1,5 @@
 <template>
-  <div class="real-home">
+  <div class="sleep-habits">
     <div class="container">
       
       <!-- home start -->
