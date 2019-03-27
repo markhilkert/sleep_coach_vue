@@ -27,7 +27,7 @@
                           </div>
                           <div class="contact-details">
                               <h5 class="">Mailing Address</h5>
-                              <p class="">220 W. Ohio St.
+                              <p class="">215 W. Ohio St.
                                   <br>Chicago, IL 60654</p>
                           </div>
                       </div>
