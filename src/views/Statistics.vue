@@ -64,7 +64,23 @@ export default {
       errors: [],
       sleeping: false,
       sleepTotal: {
+        chart: {
+                type: 'column'
+            },
+        xAxis: {
+                categories: [],
+                crosshair: true
+            },
+        title: {
+                text: 'Total Sleep Per Night'
+            },
+        yAxis: {
+            title: {
+                text: 'Hours'
+            }
+        },
         series: [{
+          name: '',
           data: [] 
         }]
       },
@@ -80,6 +96,7 @@ export default {
                     'Click and drag in the plot area to zoom in' : 'Pinch the chart to zoom in'
         },
         xAxis: {
+          categories: [],
           type: 'date'
         },
         yAxis: {
@@ -136,14 +153,21 @@ export default {
         this.sleeps = response.data;
         var i = 0;
         response.data.forEach( sleep => {
-          this.sleepTotal.series[0].data.push(sleep.hours_in_bed);
-          this.caffeineTime.series[0].data.push([]);
-          this.caffeineTime.series[0].data[i].push(sleep.caffeine.time);
-          this.caffeineTime.series[0].data[i].push(sleep.sleep_date);
+          var data_point_color = ''
+          if (sleep.good_sleep) {
+            data_point_color = 'green'
+          } else {
+            data_point_color = 'red'
+          }
+          this.sleepTotal.series[0].data.push({y: sleep.hours_in_bed, color: data_point_color});
+          this.sleepTotal.xAxis.categories.push(sleep.sleep_date);
+          this.caffeineTime.series[0].data.push(sleep.caffeine.time);
+          this.caffeineTime.xAxis.categories.push(sleep.sleep_date);
+          // this.caffeineTime.series[0].data[i].push(sleep.sleep_date);
           i++
         });
         console.log("===========================")
-        console.log(this.caffeineTime.series[0].data)
+        console.log(this.caffeineTime.series[0].data);
         console.log("===========================")
       });
 
