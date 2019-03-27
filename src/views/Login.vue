@@ -40,7 +40,7 @@
 
                       <div class="row">
                           <div class="col-lg-12 text-center">
-                              <p class="pt-5 text-white">Create new account?<a href="signup.html" class="text-dark ml-1"><b class="text-white"></b></a></p>
+                              <p class="pt-5 text-white"><a href="/signup" class="text-light ml-1"><b class="text-white"></b>Create new account?</a></p>
                           </div>
                       </div>
 
