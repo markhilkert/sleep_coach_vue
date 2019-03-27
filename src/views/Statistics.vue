@@ -74,11 +74,7 @@ export default {
         tooltip: {
           formatter: function() {
             var hours = Math.floor(this.y / 1000 / 60 / 60).toString();
-            var minutes = Math.floor((this.y / 1000 / 60 / 60 - hours) * 60).toString();
-            console.log('====================================')
-            console.log(hours)
-            console.log('====================================')
-            
+            var minutes = Math.floor((this.y / 1000 / 60 / 60 - hours) * 60).toString();          
             return hours + ' hours ' + minutes + ' minutes '
           }
         },
