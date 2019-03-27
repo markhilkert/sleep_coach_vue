@@ -102,8 +102,8 @@
                         <ul class="list-unstyled text-white footer-list">
                             <li><router-link to="/contact">Help & Support</router-link></li>
                             <li><router-link to="/">Privacy & Policy</router-link></li>
-                            <li><router-link to="/">News</router-link></li>
-                            <li><router-link to="/">Terms & Conditions</router-link></li>
+<!--                             <li><router-link to="/">News</router-link></li> -->
+                            <!-- <li><router-link to="/">Terms & Conditions</router-link></li> -->
                         </ul>
                     </div>
                 </div>
