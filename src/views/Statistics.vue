@@ -71,70 +71,28 @@ export default {
                 categories: [],
                 crosshair: true
             },
+        tooltip: {
+          formatter: function() {
+            var hours = Math.floor(this.y / 1000 / 60 / 60).toString();
+            var minutes = Math.floor((this.y / 1000 / 60 / 60 - hours) * 60).toString();
+            console.log('====================================')
+            console.log(hours)
+            console.log('====================================')
+            
+            return hours + ' hours ' + minutes + ' minutes '
+          }
+        },
         title: {
                 text: 'Total Sleep Per Night'
             },
         yAxis: {
-            title: {
-                text: 'Hours'
-            }
+          type: 'datetime',
+          title: {
+              text: 'Hours'
+          }
         },
         series: [{
           name: '',
-          data: [] 
-        }]
-      },
-      caffeineTime: {
-        chart: {
-                zoomType: 'x'
-               },
-        title: {
-            text: 'Time of last caffeine intake'
-        },
-        subtitle: {
-            text: document.ontouchstart === undefined ?
-                    'Click and drag in the plot area to zoom in' : 'Pinch the chart to zoom in'
-        },
-        xAxis: {
-          categories: [],
-          type: 'date'
-        },
-        yAxis: {
-          type: 'time',
-          title: {
-            text: 'Time'
-          }
-        },
-        legend: {
-          enabled: false
-        },
-        plotOptions: {
-          area: {
-            fillColor: {
-              linearGradient: {
-                x1: 0,
-                y1: 0,
-                x2: 0,
-                y2: 1
-              },
-              stops: [
-                [0, Highcharts.getOptions().colors[0]],
-                [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
-              ]
-            },
-            marker: {
-                radius: 2
-            },
-            lineWidth: 1,
-            states: {
-                hover: {
-                    lineWidth: 1
-                }
-            },
-            threshold: null
-          }
-        },
-        series: [{
           data: [] 
         }]
       }
@@ -151,24 +109,16 @@ export default {
     axios.get("/api/sleeps/")
       .then(response => {
         this.sleeps = response.data;
-        var i = 0;
         response.data.forEach( sleep => {
           var data_point_color = ''
           if (sleep.good_sleep) {
-            data_point_color = 'green'
+            data_point_color = '#3c9643'
           } else {
-            data_point_color = 'red'
+            data_point_color = '#871915'
           }
           this.sleepTotal.series[0].data.push({y: sleep.hours_in_bed, color: data_point_color});
           this.sleepTotal.xAxis.categories.push(sleep.sleep_date);
-          this.caffeineTime.series[0].data.push(sleep.caffeine.time);
-          this.caffeineTime.xAxis.categories.push(sleep.sleep_date);
-          // this.caffeineTime.series[0].data[i].push(sleep.sleep_date);
-          i++
         });
-        console.log("===========================")
-        console.log(this.caffeineTime.series[0].data);
-        console.log("===========================")
       });
 
     axios.get("/api/users/" + userId)
