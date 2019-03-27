@@ -1,5 +1,5 @@
 <template>
-  <div class="real-home">
+  <div class="faq">
     <div class="container">
 
       <!-- home start -->
