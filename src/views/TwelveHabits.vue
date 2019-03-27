@@ -8,7 +8,6 @@
               <div class="row">
                   <div class="col-lg-12 page-next-level text-center">
                       <h4 class="pt-3">Twelve Habits for Better Sleep</h4>
-                      <div class="page-next text-light"> <router-link to="/">Home</router-link> </div>
                   </div>                    
               </div>
           </div>

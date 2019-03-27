@@ -87,6 +87,9 @@ export default {
               text: 'Hours'
           }
         },
+        legend: {
+                    enabled: false
+        },
         series: [{
           name: '',
           data: [] 
