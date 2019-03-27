@@ -11,6 +11,7 @@ import TwelveHabits from './views/TwelveHabits.vue';
 import About from './views/About.vue';
 import ContactUs from './views/ContactUs.vue';
 import FAQ from './views/FAQ.vue';
+import Privacy from './views/Privacy.vue';
 
 
 
@@ -30,6 +31,7 @@ export default new Router({
     { path: "/about", name: "about", component: About },
     { path: "/contact", name: "contact-us", component: ContactUs },
     { path: "/faq", name: "faq", component: FAQ },
+    { path: "/privacy", name: "privacy", component: Privacy },
     { path: "/twelve-sleep-habits", name: "sleep-habits", component: TwelveHabits }
   ]
 })
