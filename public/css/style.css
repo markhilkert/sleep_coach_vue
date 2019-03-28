@@ -32,6 +32,7 @@
 body {
     font-family: 'Yantramanav', sans-serif;
     color: #252525;
+    background-image: url('dust_scratches.png');
 }
 
 a {
