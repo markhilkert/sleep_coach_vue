@@ -30,7 +30,6 @@
 
                           <highcharts :options="sleepTotal"></highcharts>
                           <div class="underline"></div>
-                          <highcharts :options="caffeineTime"></highcharts>
                       </div>
                   </div>
               </div>
@@ -41,9 +40,9 @@
       <div>
         <h2> </h2>
       </div>
-
-
       <!-- statistics end -->
+
+      <button @click="kill()"> Delete Last Sleep </button>
 
     </div>
   </div>
@@ -125,6 +124,17 @@ export default {
         this.user = response.data;
     });
   },
-  methods: {}
-};
+  methods: {
+    kill: function() {
+      axios.delete("/api/sleeps/destroy_last")
+      .then(response => {
+        var length = this.sleepTotal.series[0].data.length;
+        this.sleepTotal.series[0].data.splice(length - 1, 1);
+      })
+      .catch(error => {
+        this.errors = error.response.data.errors;
+      });
+    }
+  }
+}
 </script>
