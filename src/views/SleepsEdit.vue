@@ -9,52 +9,44 @@
       <form v-on:submit.prevent="submit()">
 
         <div class="form-group">
-          <label>First Name: </label>
-          <input class='form-control' type='text' v-model="cat.first_name" placeholder="First Name">
+          <label> Start Time </label>
+          <input class='form-control' type='time' v-model="sleep.start_time">
         </div>
         <div class="form-group">
-          <label>Family Name: </label>
-          <input class='form-control' type='text' v-model="cat.family_name" placeholder="Family Name">
+          <label> End Time </label>
+          <input class='form-control' type='time' v-model="sleep.end_time">
         </div>
         <div class="form-group">
-          <label>Title: </label>
-          <input class='form-control' type='text' v-model="cat.title" placeholder="Title">
+          <label> Good Sleep </label>
+          <input class='form-check' type='checkbox' v-model="sleep.good_sleep">
         </div>
         <div class="form-group">
-          <label>Education: </label>
-          <input class='form-control' type='text' v-model="cat.education" placeholder="Education">
+          <label> Bath Before Bed </label>
+          <input class='form-check' type='checkbox' v-model="sleep.bath_before_bed">
         </div>
         <div class="form-group">
-          <label>Experience: </label>
-          <input class='form-control' type='text' v-model="cat.experience" placeholder="Experience">
+          <label> Dark Room </label>
+          <input class='form-check' type='checkbox' v-model="sleep.dark_room">
         </div>
         <div class="form-group">
-          <label>Location: </label>
-          <input class='form-control' type='text' v-model="cat.location" placeholder="Location">
+          <label> Cool Room </label>
+          <input class='form-check' type='checkbox' v-model="sleep.cool_room">
         </div>
         <div class="form-group">
-          <label>Owner: </label>
-          <input class='form-control' type='text' v-model="cat.owner" placeholder="Owner">
+          <label> Clock Visible </label>
+          <input class='form-check' type='checkbox' v-model="sleep.clock_visible">
         </div>
         <div class="form-group">
-          <label>Summary: </label>
-          <input class='form-control' type='text' v-model="cat.summary" placeholder="Summary">
+          <label> Electronics in Room </label>
+          <input class='form-check' type='checkbox' v-model="sleep.electronics_in_room">
         </div>
         <div class="form-group">
-          <label>Profile Picture URL: </label>
-          <input class='form-control' type='text' v-model="cat.profile_url" placeholder="Profile url">
+          <label> Lie in Bed </label>
+          <input class='form-check' type='checkbox' v-model="sleep.lie_in_bed">
         </div>
         <div class="form-group">
-          <label>Accomplishments: </label>
-          <input class='form-control' type='text' v-model="cat.accomplishments" placeholder="Accomplishments">
-        </div>
-        <div class="form-group">
-          <label>Endorsements: </label>
-          <input class='form-control' type='text' v-model="cat.endorsements" placeholder="Endorsements">
-        </div>
-        <div class="form-group">
-          <label>Skills: </label>
-          <input class='form-control' id='' type='text' v-model="cat.skills" placeholder="Skills">
+          <label> Room Temperature </label>
+          <input class='form-control' type='text' v-model="sleep.room_temperature" placeholder="Enter Room Temperature">
         </div>
         
         <input type="submit" value="Update" class="btn btn-primary">
