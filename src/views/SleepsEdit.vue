@@ -10,11 +10,11 @@
 
         <div class="form-group">
           <label> Start Time </label>
-          <input class='form-control' type='time' v-model="sleep.start_time">
+          <input class='form-control' type='time' v-model="sleep.formatted.simple_start_time">
         </div>
         <div class="form-group">
           <label> End Time </label>
-          <input class='form-control' type='time' v-model="sleep.end_time">
+          <input class='form-control' type='time' v-model="sleep.formatted.simple_end_time">
         </div>
         <div class="form-group">
           <label> Good Sleep </label>
@@ -81,23 +81,25 @@ export default {
               clock_visible: "",
               electronics_in_room: "",
               lie_in_bed: "",
-              room_temperature: ""
+              room_temperature: "",
+              formatted: []
               },
       errors: []
     };
   },
   created: function() {
-    axios.get("/api/sleep/" + this.$route.params.id)
+    axios.get("/api/sleeps/" + this.$route.params.id)
       .then(response => {
         this.sleep = response.data;
+        console.log(this.sleep)
       })
   },
   methods: {
     submit: function() {
       var params = {
                     user_id: this.sleep.user_id,
-                    start_time: this.sleep.start_time,
-                    end_time: this.sleep.end_time,
+                    start_time: this.sleep.formatted.simple_start_time,
+                    end_time: this.sleep.formatted.simple_end_time,
                     good_sleep: this.sleep.good_sleep,
                     bath_before_bed: this.sleep.bath_before_bed,
                     dark_room: this.sleep.dark_room,
@@ -109,7 +111,7 @@ export default {
                     };
       axios.patch("/api/sleeps/" + this.sleep.id, params)
         .then(response => {
-          this.$router.push("/cats/" + this.cat.id);
+          this.$router.push("/sleeps/" + this.sleep.id);
         }).catch(error => {
           this.errors = error.response.data.errors;
         });

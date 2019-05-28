@@ -91,15 +91,13 @@ export default {
     };
   },
   created: function() {
-    axios.get("/api/sleep/" + this.$route.params.id)
+    axios.get("/api/sleeps/" + this.$route.params.id)
     .then(response => {
       this.sleep = response.data;
+      console.log(this.sleep)
     });
   },
   methods: {
-    edit: function() {
-      this.$router.push("/sleeps/" + this.sleep.id + "/edit");
-    }
   }
 };
 </script>
