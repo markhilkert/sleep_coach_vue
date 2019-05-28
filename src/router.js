@@ -12,6 +12,8 @@ import About from './views/About.vue';
 import ContactUs from './views/ContactUs.vue';
 import FAQ from './views/FAQ.vue';
 import Privacy from './views/Privacy.vue';
+import SleepsEdit from './views/SleepsEdit.vue';
+import SleepsShow from './views/SleepsShow.vue';
 
 
 
@@ -23,6 +25,8 @@ export default new Router({
   routes: [
     { path: '/', name: 'home', component: Home },
     { path: '/sleep', name: 'sleep', component: Sleep },
+    { path: '/sleeps/:id/edit', name: 'sleeps-edit', component: SleepsEdit },
+    { path: '/sleeps/:id/', name: 'sleeps-show', component: SleepsShow },
     { path: "/statistics", name: "statistics", component: Statistics },
     { path: '/login', name: 'login', component: Login },
     { path: '/logout', name: 'logout', component: Logout },
