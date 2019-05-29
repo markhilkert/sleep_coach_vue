@@ -27,7 +27,7 @@
                   <div class="col-lg-12 text-center">
                       <div class="section-title mx-auto">
                           <h3 class="mb-4">Real Results. </h3>
-                          <p class="text-muted">Sleep Coach is a beautifully simple App to help you take control of your sleep. You simply start the timer when you're going to bed, and stop the timer when you wake up. Later, log your stats. That's it. </p>
+                          <p class="text-muted">Sleep Coach is a beautifully simple App to help you take control of your sleep. Simply start the timer when you're going to bed, and stop the timer when you wake up. Later, log your stats. That's it. </p>
                       </div>
                   </div>
               </div>

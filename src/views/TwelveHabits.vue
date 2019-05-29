@@ -47,7 +47,7 @@
                           <div class="underline"></div>
 
                           <h6 class="mb-4">  &nbsp; 11. Get morning sunlight exposure. </h6>
-                          <p>Daylight helps regulate your sleep patterns. Try to get 30 minutes of natural light. Try to wake up with the sun or use very bright lights in the morning. If possible, dim the lights in your home before bedtime. <br> <br> </p>
+                          <p>Daylight keeps your sleep on the right schedule. Try to wake up with the sun, and to get 30 minutes of sunlight as early as you can. If you don't have access to natural light, turn on bright lights when you wake up. <br> <br> </p>
 
                           <div class="underline"></div>
 
@@ -58,32 +58,32 @@
                       <div class="custom-faq mt-3">
 
                         <h6 class="mb-4">  &nbsp; 2. Exercise, but not too late.  </h6>
-                         <p>Try to exercise at least 30 minutes most days, but not later than 2–3 hours before bedtime. <br> <br> <br> </p>
+                         <p>Try to exercise at least 30 minutes most days, but not sooner than 2–3 hours before bedtime. <br> <br> <br> </p>
 
                           <div class="underline"></div>
 
                          <h6 class="mb-4">  4. Avoid alcohol before bed.  </h6>
-                          <p>Nightcaps may help you relax, but it robs you of REM sleep and prevents you from sleeping deeply. Binge drinking can also impair your breathing at night, causing you to interrupt your sleep cycles by waking up for short periods you won’t remember. You also tend to wake up from withdrawal when the alcohol wears off.</p>
+                          <p>A Nightcap may help you relax, but it robs you of REM (dream) sleep and prevents you from sleeping deeply. Binge drinking can also impair your breathing at night, causing you to interrupt your sleep cycles by waking up for short periods that you won’t remember. You also tend to wake up from withdrawal when the alcohol wears off.</p>
 
                           <div class="underline"></div>
 
                           <h6 class="mb-4"> &nbsp; 6. If possible, avoid medicines that delay or disrupt your sleep. </h6>
-                          <p>Commonly: heart, blood pressure, asthma medications, and over-the-counter cough, cold, or allergy medicine. If you think your medication is affecting your sleep, talk to your doctor.</p>
+                          <p>Watch out for: heart, blood pressure, asthma medications, and over-the-counter cough, cold, or allergy medicine. If you think your medication is affecting your sleep, talk to your doctor.</p>
 
                           <div class="underline"></div>
 
                           <h6 class="mb-4"> &nbsp; 8. Relax before bed.  </h6>
-                          <p>Don’t overschedule your day so you don’t have time to wind down. E.g., try reading or listening to music as a part of your bedtime ritual.</p>
+                          <p>Don’t overschedule your day so you don’t have time to wind down. For example, try reading a book or listening to music as a part of your bedtime ritual.</p>
 
                           <div class="underline"></div>
 
                           <h6 class="mb-4"> &nbsp; 10.  Dark, cool gadget-free bedroom.  </h6>
-                          <p>Remove anything distracting from your bedroom, e.g.: noises, bright lights, uncomfortable bed, warm temperatures. Make sure you can’t see the time from where your sleeping so you don’t worry about the time when trying to fall asleep.</p>
+                          <p>Remove anything distracting from your bedroom, e.g.: unpleasant noises, bright lights, an uncomfortable bed, or warm temperatures. Make sure you can’t see the time from where your sleeping, which can provoke anxiety. <br> <br> </p>
 
                           <div class="underline"></div>
 
                           <h6 class="mb-4"> &nbsp; 12.  Don’t lie in bed awake.  </h6>
-                          <p>If you can’t sleep for more than 20 minutes, or if you’re starting to feel anxious or worried about sleep, get up and do a relaxing activity until you feel tired. If you let yourself dwell on the anxiety of not being able to sleep, it makes it harder to actually fall asleep.</p>
+                          <p>If you can’t sleep for more than 20 minutes, or if you’re starting to feel anxious or worried about sleeping, get up and do a relaxing activity until you feel tired. If you let yourself dwell on the anxiety of not being able to sleep, it makes it harder to actually fall asleep.</p>
 
                           <div class="underline"></div>
 

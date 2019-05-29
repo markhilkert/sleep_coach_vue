@@ -26,7 +26,7 @@
                               <i class="mbri-home h1 text-custom"></i>
                           </div>
                           <div class="contact-details">
-                              <h5 class="">Mailing Address</h5>
+                              <h5 class="">Address</h5>
                               <p class="">215 W. Ohio St.
                                   <br>Chicago, IL 60654</p>
                           </div>
@@ -39,8 +39,8 @@
                           </div>
                           <div class="contact-details">
                               <h5 class="">Phone</h5>
-                              <p class="mb-0 f-14">424-256-5578</p>
-                              <p class="f-14"> 800-Sleep-Coach </p>
+                              <p class="mb-0 f-14">Coming Soon!</p>
+                              <p class="f-14"> <br> </p>
                           </div>
                       </div>
                   </div>
@@ -63,8 +63,8 @@
                           </div>
                           <div class="contact-details">
                               <h5 class="f-16">Web</h5>
-                              <p class="mb-0 f-14">www.sleepcoach.com</p>
-                              <p class="f-14">www.sleepcoach.com/about</p>
+                              <p class="mb-0 f-14"> <a href="https://www.markhilkert.com/sleepcoach">www.markhilkert.com/sleepcoach</a> </p>
+                              <p class="f-14"> <br> </p>
                           </div>
                       </div>
                   </div>
