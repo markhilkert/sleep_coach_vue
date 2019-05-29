@@ -32,7 +32,7 @@
                           <div class="about-icon">
                               <i class="mbri-image-gallery"></i>
                               <h5 class="text-muted mb-3 mt-3">Sleep Coach is the product of one insomniac's obsession with bring great sleep to the world.</h5>
-                              <p class="text-muted"> Sleep Coach's founder & CEO spent years trying to improve his sleep. He bought every type of pillow, spent hundreds of dollars on sleep trackers, but still wasn't getting results. Then, he read <a href="https://smile.amazon.com/Why-We-Sleep-Unlocking-Dreams/dp/1501144324"> an influential book </a> on sleep that focused on 12 sleep hygiene habits. Implementing those habits changed his life. So he founded Sleep Coach and wrote this app to help others track and implement the habits. We hope that we can improve the quality of your sleep—and thus, the quality of your life—one habit at at time.</p>
+                              <p class="text-muted"> Sleep Coach's founder & CEO spent years trying to improve his sleep. He bought every type of pillow, spent hundreds of dollars on sleep trackers, consulted his primary care doctor, but still wasn't seeing results. Then, he read <a href="https://smile.amazon.com/Why-We-Sleep-Unlocking-Dreams/dp/1501144324"> an influential book </a> on sleep that focused on 12 sleep hygiene habits. Implementing those habits changed his life. So he created Sleep Coach to help others track and implement those habits. We hope that we can improve the quality of your sleep—and the quality of your life—one habit at at time.</p>
                           </div>
                       </div>
                   </div>
