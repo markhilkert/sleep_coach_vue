@@ -4,13 +4,13 @@
       <li v-for="error in errors"> {{ error }}</li>
     </ul>
   
-    <section class="section services-wrapper">
+    <section class="section bg-sub-page-home services-wrapper">
       <div class="container">
           
           <div class="row">
               <div class="col-lg-12 text-center">
                   <div class="section-title mx-auto">
-                      <h3 id="edit-title" class="mb-4" style="color: white;"> Change Me. </h3>
+                      <h3 id="edit-title" class="mb-4" style="color: white;"> Edit your sleep from {{ this.sleep.formatted.fall_asleep_date }}. </h3>
                   </div>
               </div>
           </div>
@@ -140,55 +140,6 @@
           </div>
         </div>
     </section>
-
-    <div class='container'>
-      <h2>Edit Sleep</h2>
-      <form v-on:submit.prevent="submit()">
-
-        <div class="form-group">
-          <label> Start Time </label>
-          <input class='form-control' type='time' v-model="sleep.formatted.simple_start_time">
-        </div>
-        <div class="form-group">
-          <label> End Time </label>
-          <input class='form-control' type='time' v-model="sleep.formatted.simple_end_time">
-        </div>
-        <div class="form-group">
-          <label> Good Sleep </label>
-          <input class='form-check' type='checkbox' v-model="sleep.good_sleep">
-        </div>
-        <div class="form-group">
-          <label> Bath Before Bed </label>
-          <input class='form-check' type='checkbox' v-model="sleep.bath_before_bed">
-        </div>
-        <div class="form-group">
-          <label> Dark Room </label>
-          <input class='form-check' type='checkbox' v-model="sleep.dark_room">
-        </div>
-        <div class="form-group">
-          <label> Cool Room </label>
-          <input class='form-check' type='checkbox' v-model="sleep.cool_room">
-        </div>
-        <div class="form-group">
-          <label> Clock Visible </label>
-          <input class='form-check' type='checkbox' v-model="sleep.clock_visible">
-        </div>
-        <div class="form-group">
-          <label> Electronics in Room </label>
-          <input class='form-check' type='checkbox' v-model="sleep.electronics_in_room">
-        </div>
-        <div class="form-group">
-          <label> Lie in Bed </label>
-          <input class='form-check' type='checkbox' v-model="sleep.lie_in_bed">
-        </div>
-        <div class="form-group">
-          <label> Room Temperature </label>
-          <input class='form-control' type='text' v-model="sleep.room_temperature" placeholder="Enter Room Temperature">
-        </div>
-        
-        <input type="submit" value="Update" class="btn btn-primary">
-      </form>
-    </div>
   </div>
 </template>
 
