@@ -1,72 +1,49 @@
 <template>
   <div class="sleeps-show">
-
-    <div class="profile-card">
-      <div>
-        <img id="banner-image" src="http://www.wishbonespetcare.com/LRGpawprintbanner.png" alt="doesn't work">
-      </div>
-      <div class="card">
-        <div class="row">
-          <div class="col">
-            <p class="card-title" id="first-family-name">{{ cat.first_name  }} {{  cat.family_name}}</p>
-            <p class="card-text" id="title">{{ cat.title }}</p>
-            <p class="card-text" id="location">{{ cat.location }}</p>
-            <p class="card-text">Owner: {{ cat.owner }}</p>
-          </div>
-          <div class="col">
-            <div id="action-buttons">
-              <button v-on:click="connect()" class="btn btn-primary main-button">Connect</button>
-              <button v-on:click="edit()" class="btn btn-primary main-button">Edit Profile</button>
-              <router-link v-bind:to="'/cats/' + cat.id + '/catnections'">
-                <button class="btn btn-primary main-button">Catnections</button>
-              </router-link>
-            </div>
-          </div>
-        </div>
-        <div id="accordion">
-          <div>
-            <div class="card-header" id="headingOne">
-              <h5 class="mb-0 text-center">
-                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  Summary: 
-                </button>
-              </h5>
-            </div>
-            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-              <div class="card-body">
-                {{ cat.summary }}
+    <section class="section bg-sub-page-home services-wrapper">
+      <div class="container">
+          
+          <div class="row">
+              <div class="col-lg-12 text-center">
+                  <div class="section-title mx-auto">
+                      <h3 id="edit-title" class="mb-4" style="color: white;"> Your sleep on {{ this.sleep.formatted.fall_asleep_date }}. </h3>
+                  </div>
               </div>
+          </div>
+
+          <div class="row mt-5">
+            <div class="col-lg-3"> </div>
+            <div class="col-lg-6">
+                <div class="service-boxed bg-white p-4">
+                    <i class="mbri-globe service-icon font-weight-bold"></i>
+                    <div class="service-body pt-3">
+                        <h5 class=""> {{ this.sleep.formatted.fall_asleep_date }}—Sleep Stats: </h5>
+
+                        <div class="text-left"> Fall Asleep Time: <b> {{ this.sleep.start_time }} </b> </div>
+                        <div class="text-left"> Wake Time: <b> {{ this.sleep.end_time }} </b> </div>
+                        <div class="text-left"> You <b> slept {{ this.sleep.good_sleep ? "well" : "poorly" }} </b>  that night. </div>
+                        <div class="text-left"> You <b>{{ this.sleep.bath_before_bed ? "showered" : "did not shower" }} </b> before bed. </div>
+                        <div class="text-left"> Your bedroom <b> was {{ this.sleep.dark_room ? "" : "not" }} </b> completely dark. </div>
+                        <div class="text-left"> You <b> {{ this.sleep.cool_room ? "felt cool" : "did not feel cool" }} </b> that night. </div>
+                        <div class="text-left"> You <b> could {{ this.sleep.clock_visible ? "" : "not" }} </b> see any clock faces from your bed. </div>
+                        <div class="text-left"> You <b> {{ this.sleep.electronics_in_room ? "had" : "did not have" }} electronics </b> in your bedroom. </div>
+                        <div class="text-left"> You <b> {{ this.sleep.lie_in_bed ? "lied" : "did not lie" }} in bed </b> for longer than 20 minutes at a time. </div>
+                        <div class="text-left"> Your room was <b> {{ this.sleep.room_temperature }} degrees. </b> </div>
+                    </div>
+                </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div id="profile-img-location">
-      <div class="profile-img"></div>
-        <img class="shadow-lg" v-if="cat.profile_url" :src="cat.profile_url">
-    </div>
-    <div class="card">
-      <p class="card-title" id="sub-header">Experience:</p>
-      <p class="card-text" id="experience">{{ cat.experience }}</p>
-      <hr />
-      <p class="card-title" id="sub-header">Education:</p>
-      <p class="card-text">{{ cat.education }}</p>
-    </div>
-    <div class="card">
-      <p class="card-title" id="sub-header">Skills:</p>
-      <p class="card-text">{{ cat.skills }}</p>
-      <hr />
-      <p class="card-title" id="sub-header">Endorsements:</p>
-      <p class="card-text">{{ cat.endorsements }}</p>
-      <hr />
-      <p class="card-title" id="sub-header">Accomplishments:</p>
-      <p class="card-text">{{ cat.accomplishments }}</p>
-    </div>
+    </section>
   </div>
 </template>
 
-<style>
 
+<style>
+.btn{
+  position: relative;
+  align-self: center;
+}
 </style>
 
 <script>
@@ -86,8 +63,9 @@ export default {
               clock_visible: "",
               electronics_in_room: "",
               lie_in_bed: "",
-              room_temperature: ""
-              }
+              room_temperature: "",
+              formatted: []
+      }
     };
   },
   created: function() {
