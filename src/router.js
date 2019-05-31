@@ -31,7 +31,7 @@ export default new Router({
     { path: '/login', name: 'login', component: Login },
     { path: '/logout', name: 'logout', component: Logout },
     { path: "/signup", name: "signup", component: Signup },
-    { path: "/sleeps/:id/edit", name: "sleep-information", component: SleepInformation },
+    { path: "/sleeps/:id/sleep-information", name: "sleep-information", component: SleepInformation },
     { path: "/about", name: "about", component: About },
     { path: "/contact", name: "contact-us", component: ContactUs },
     { path: "/faq", name: "faq", component: FAQ },
