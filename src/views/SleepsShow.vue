@@ -17,7 +17,7 @@
                 <div class="service-boxed bg-white p-4">
                     <i class="mbri-globe service-icon font-weight-bold"></i>
                     <div class="service-body pt-3">
-                        <h5 class=""> {{ this.sleep.formatted.fall_asleep_date }}—Sleep Stats: </h5>
+                        <h5 class=""> {{ this.sleep.formatted.fall_asleep_date }}: Sleep Stats </h5>
 
                         <div class="text-left"> Fall Asleep Time: <b> {{ this.sleep.start_time }} </b> </div>
                         <div class="text-left"> Wake Time: <b> {{ this.sleep.end_time }} </b> </div>

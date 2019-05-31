@@ -62,6 +62,8 @@ export default {
         if (this.sleeping) { 
           this.sleep.id = response.data.last_sleep_id
         }
+      }).catch(error => {
+        console.log(error)
       });
   },
   methods: {
@@ -70,7 +72,6 @@ export default {
       axios.post("/api/sleeps/start")      
       .then(response => {
         this.sleep = response.data;
-        console.log(this.sleep)
       }).catch(error => {
         this.errors = error.response.data.errors;
       });
@@ -79,7 +80,7 @@ export default {
       this.sleeping = false
       axios.patch("/api/sleeps/end_good")
       .then(response => {
-        this.$router.push("/sleeps/" + this.sleep.id + "/edit");
+        this.$router.push("/sleeps/" + this.sleep.id + "/sleep-information");
       }).catch(error => {
         this.errors = error.response.data.errors;
       });
@@ -88,7 +89,7 @@ export default {
       this.sleeping = false
       axios.patch("/api/sleeps/end_bad")
       .then(response => {
-        this.$router.push("/sleeps/" + this.sleep.id + "/edit");
+        this.$router.push("/sleeps/" + this.sleep.id + "/sleep-information");
       }).catch(error => {
         this.errors = error.response.data.errors;
       });
